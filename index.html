@@ -246,14 +246,9 @@ let me=null, loans=[], allCols=[], amtStr='0', selLoan=null;
 const fmt=n=>'LKR '+Math.round(n).toLocaleString();
 const tod=()=>new Date().toISOString().split('T')[0];
 function saveL(){localStorage.setItem('bmc_loans',JSON.stringify(loans));localStorage.setItem('bmc_all_cols',JSON.stringify(allCols))}
-function getUrl(){
-  // Check both storage keys — bmc_url (new) and lkf_url (old) for compatibility
-  return localStorage.getItem('bmc_url') || localStorage.getItem('lkf_url') || '';
-}
-function saveUrl(url){
-  localStorage.setItem('bmc_url', url);
-  localStorage.setItem('lkf_url', url); // keep both in sync
-}
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbxYqwY-1exNKX7NnGRX9N8d_FAflnxcwoOlLoTwQwG_5M4qpVToaA_JtA7JJ7P107fN/exec";
+function getUrl(){ return SHEETS_URL; }
+function saveUrl(url){ /* URL is hardcoded */ }
 function myCols(){return allCols.filter(c=>c.collector===me)}
 function todCols(){return myCols().filter(c=>String(c.date).startsWith(tod()))}
 function getPhoto(){return localStorage.getItem('bmc_photo_'+me)||''}
@@ -326,10 +321,10 @@ function setSP(st,msg){
   el.className='sync-p '+(st==='ok'?'sp-ok':st==='err'?'sp-err':'sp-ing');
   el.textContent=msg;
 }
-async function apiFetch(a){const u=getUrl();if(!u)return null;try{const r=await fetch(u+'?action='+a);return await r.json()}catch{return null}}
-async function apiPost(a,d){const u=getUrl();if(!u)return null;try{const r=await fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:a,data:d})});return await r.json()}catch{return null}}
+async function apiFetch(a){try{const r=await fetch(SHEETS_URL+'?action='+a);return await r.json()}catch{return null}}
+async function apiPost(a,d){try{const r=await fetch(SHEETS_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:a,data:d})});return await r.json()}catch{return null}}
 async function syncData(){
-  if(!getUrl()){setSP('err','⚠ Offline');return}
+  // URL is hardcoded - always attempt sync
   setSP('ing','⟳ Sync');
   const[lr,cr]=await Promise.all([apiFetch('getLoans'),apiFetch('getCollections')]);
   if(lr?.loans?.length){loans=recalc(lr.loans);localStorage.setItem('bmc_loans',JSON.stringify(loans))}
@@ -502,13 +497,9 @@ function renderProfile(){
       <div class="ir"><span class="ir-l">Name</span><span class="ir-v">${me}</span></div>
       <div class="ir"><span class="ir-l">Role</span><span class="ir-v">${ROLES[me]||'Collector'}</span></div>
       <div class="ir"><span class="ir-l">Today's Clients</span><span class="ir-v">${tc.length}</span></div>
-      <div class="ir"><span class="ir-l">Google Sheets</span><span class="ir-v" style="color:${getUrl()?'var(--green)':'var(--red)'}">${getUrl()?'✓ Connected ✓':'⚠ URL not saved yet'}</span></div>
+      <div class="ir"><span class="ir-l">Google Sheets</span><span class="ir-v" style="color:var(--green)">✓ Connected</span></div>
     </div>
-    ${!getUrl() ? `<div style="background:var(--amberl);border:1px solid #fcd34d;border-radius:13px;padding:14px;margin-bottom:10px">
-      <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:8px">⚙️ Paste your Google Sheets URL here (ask your owner)</div>
-      <input id="urlInput" type="url" style="width:100%;padding:11px 13px;border:2px solid #fcd34d;border-radius:10px;font-size:13px;font-family:monospace;color:var(--ink);margin-bottom:8px;background:#fff" placeholder="https://script.google.com/macros/s/.../exec" value="${getUrl()}">
-      <button onclick="saveUrlFromProfile()" style="width:100%;padding:12px;background:var(--blue);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">Save URL & Connect</button>
-    </div>` : `<div style="background:var(--greenl);border-radius:13px;padding:12px;margin-bottom:10px;text-align:center;font-size:13px;font-weight:600;color:var(--green)">✓ Google Sheets connected — data saves automatically</div>`}
+    <div style="background:var(--greenl);border-radius:13px;padding:12px;margin-bottom:10px;text-align:center;font-size:13px;font-weight:600;color:var(--green)">✓ Google Sheets connected — data saves automatically</div>
     <button class="btn-so" onclick="signOut()">Sign Out</button>`; 
 }
 
