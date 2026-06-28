@@ -6,9 +6,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="LK Finance">
+<meta name="apple-mobile-web-app-title" content="Bhavi MC">
 <meta name="theme-color" content="#0f172a">
-<title>LK Finance · Collector</title>
+<title>Bhavi Micro Credit · Collector</title>
 <link rel="manifest" href="manifest.json">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -23,148 +23,128 @@
 html,body{height:100%;background:#f1f5f9;font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);overflow:hidden}
 .screen{display:none;flex-direction:column;height:100vh;height:100dvh}
 .screen.active{display:flex}
-
 /* LOGIN */
-#loginScreen{background:linear-gradient(160deg,#0f172a 0%,#1e3a8a 60%,#1d4ed8 100%);align-items:center;justify-content:center;padding:24px;overflow-y:auto}
-.login-card{background:#fff;border-radius:24px;padding:36px 28px;width:100%;max-width:380px;box-shadow:0 20px 40px rgba(0,0,0,.3)}
-.app-icon{width:68px;height:68px;background:linear-gradient(135deg,#1d4ed8,#7c3aed);border-radius:20px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 20px rgba(29,78,216,.4)}
-.login-title{font-size:24px;font-weight:800;text-align:center;letter-spacing:-.5px}
-.login-title span{color:var(--blue)}
-.login-sub{color:var(--muted);font-size:13px;text-align:center;margin-bottom:28px;margin-top:4px}
-.field{margin-bottom:16px}
+#sLogin{background:linear-gradient(160deg,#0f172a 0%,#1e3a8a 60%,#1d4ed8 100%);align-items:center;justify-content:center;padding:24px;overflow-y:auto}
+.lcard{background:#fff;border-radius:24px;padding:32px 26px;width:100%;max-width:380px;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.app-ic{width:68px;height:68px;background:linear-gradient(135deg,#1d4ed8,#7c3aed);border-radius:20px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 20px rgba(29,78,216,.4)}
+.login-brand{font-size:22px;font-weight:800;text-align:center;letter-spacing:-.5px}
+.login-brand span{color:var(--blue)}
+.login-sub{color:var(--muted);font-size:12px;text-align:center;margin-bottom:24px;margin-top:4px}
 .field label{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px}
-.sel-wrap{position:relative}
-.sel-wrap::after{content:"▾";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
-.sel-wrap select,.field input[type=password]{width:100%;padding:14px 16px;border:2px solid var(--border);border-radius:12px;font-size:16px;font-family:inherit;color:var(--ink);background:#fff;-webkit-appearance:none;appearance:none}
-.sel-wrap select:focus,.field input[type=password]:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--bluel)}
-.btn-signin{width:100%;padding:16px;background:var(--blue);color:#fff;border:none;border-radius:12px;font-size:17px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 4px 14px rgba(29,78,216,.35);margin-top:4px}
-.btn-signin:active{transform:scale(.98)}
-.err-box{background:var(--redl);color:var(--red);padding:10px 14px;border-radius:10px;font-size:14px;font-weight:500;margin-bottom:14px;display:none}
-
+.field{margin-bottom:14px}
+.sel-w{position:relative}
+.sel-w::after{content:"▾";position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.sel-w select,.field input[type=password]{width:100%;padding:13px 15px;border:2px solid var(--border);border-radius:12px;font-size:16px;font-family:inherit;color:var(--ink);background:#fff;-webkit-appearance:none}
+.sel-w select:focus,.field input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--bluel)}
+.btn-sign{width:100%;padding:15px;background:var(--blue);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 4px 14px rgba(29,78,216,.35);margin-top:4px}
+.btn-sign:active{transform:scale(.98)}
+.err{background:var(--redl);color:var(--red);padding:10px 13px;border-radius:10px;font-size:13px;font-weight:500;margin-bottom:12px;display:none}
 /* TOPBAR */
-.topbar{background:#0f172a;color:#fff;padding:0 16px;height:58px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.tb-left{display:flex;align-items:center;gap:10px}
-.tb-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.topbar{background:#0f172a;color:#fff;padding:0 14px;height:56px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.tb-l{display:flex;align-items:center;gap:10px}
+.tb-photo{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.3);background:linear-gradient(135deg,var(--blue),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:#fff;overflow:hidden;flex-shrink:0}
+.tb-photo img{width:100%;height:100%;object-fit:cover}
 .tb-name{font-weight:700;font-size:15px}
-.tb-sub{font-size:11px;color:rgba(255,255,255,.45);margin-top:1px}
-.sync-pill{font-size:11px;padding:4px 10px;border-radius:20px;font-weight:600}
+.tb-role{font-size:11px;color:rgba(255,255,255,.45);margin-top:1px}
+.sync-p{font-size:11px;padding:4px 10px;border-radius:20px;font-weight:600;white-space:nowrap}
 .sp-ok{background:rgba(22,163,74,.25);color:#86efac}
 .sp-ing{background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)}
 .sp-err{background:rgba(220,38,38,.25);color:#fca5a5}
-
-/* CONTENT + NAV */
-.content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:16px 14px}
-.bottom-nav{display:flex;background:#fff;border-top:1px solid var(--border);flex-shrink:0;padding-bottom:env(safe-area-inset-bottom)}
-.bn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 4px 11px;cursor:pointer;border:none;background:none;font-family:inherit;color:var(--faint);gap:3px}
+/* WARNING ALERT */
+.warn-alert{background:linear-gradient(135deg,#7f1d1d,#dc2626);color:#fff;padding:10px 14px;font-size:12px;font-weight:600;text-align:center;flex-shrink:0}
+/* CONTENT */
+.content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 12px}
+/* BOTTOM NAV */
+.bnav{display:flex;background:#fff;border-top:1px solid var(--border);flex-shrink:0;padding-bottom:env(safe-area-inset-bottom)}
+.bn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:9px 4px 10px;cursor:pointer;border:none;background:none;font-family:inherit;color:var(--faint);gap:3px}
 .bn.on{color:var(--blue)}
-.bn-ic{font-size:22px;line-height:1}
+.bn-ic{font-size:20px;line-height:1}
 .bn-lb{font-size:10px;font-weight:600;letter-spacing:.3px}
-
-/* PAGES */
 .page{display:none}.page.on{display:block}
-
 /* TODAY BANNER */
-.today-banner{background:linear-gradient(135deg,#1e3a8a,#1d4ed8);border-radius:18px;padding:20px;color:#fff;margin-bottom:16px}
-.tb-date{font-size:13px;opacity:.65;margin-bottom:12px;font-weight:500}
+.today-banner{background:linear-gradient(135deg,#1e3a8a,#1d4ed8);border-radius:16px;padding:18px;color:#fff;margin-bottom:14px}
+.tb-date{font-size:12px;opacity:.65;margin-bottom:10px;font-weight:500}
 .tb-stats{display:grid;grid-template-columns:1fr 1fr;gap:0}
-.tb-stat .v{font-size:28px;font-weight:800;line-height:1}
-.tb-stat .l{font-size:12px;opacity:.65;margin-top:4px;font-weight:500}
-
+.tb-s .v{font-size:26px;font-weight:800;line-height:1}
+.tb-s .l{font-size:11px;opacity:.65;margin-top:3px}
 /* CARDS */
-.card{background:#fff;border-radius:16px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:14px;overflow:hidden}
-.card-hd{padding:14px 16px 0;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
-.card-bd{padding:16px}
-
-/* CLIENT SELECT */
-.cli-select{width:100%;padding:14px 40px 14px 16px;border:2px solid var(--border);border-radius:12px;font-size:16px;font-family:inherit;color:var(--ink);background:#fff;-webkit-appearance:none;appearance:none;font-weight:500}
-.cli-select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--bluel)}
-.cli-wrap{position:relative}
-.cli-wrap::after{content:"▾";position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;font-size:18px}
-.client-detail{background:var(--s2);border-radius:12px;padding:14px;margin-top:12px;display:none;border:1px solid var(--border)}
-.cd-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0}
-.cd-lbl{font-size:13px;color:var(--muted)}
-.cd-val{font-size:14px;font-weight:700}
-.cd-val.red{color:var(--red)}.cd-val.blue{color:var(--blue)}
-
-/* AMOUNT DISPLAY */
-.amt-section{text-align:center;padding:18px 0 14px}
-.amt-lbl{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px}
-.amt-big{font-size:52px;font-weight:800;color:var(--ink);letter-spacing:-3px;line-height:1;display:flex;align-items:flex-start;justify-content:center;gap:6px}
-.amt-cur{font-size:18px;font-weight:700;color:var(--muted);margin-top:10px;letter-spacing:0}
-
+.card{background:#fff;border-radius:14px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:12px;overflow:hidden}
+.card-hd{padding:13px 14px 0;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
+.card-bd{padding:14px}
+.cli-w{position:relative}
+.cli-w::after{content:"▾";position:absolute;right:13px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;font-size:17px}
+.cli-sel{width:100%;padding:13px 36px 13px 14px;border:2px solid var(--border);border-radius:12px;font-size:15px;font-family:inherit;color:var(--ink);background:#fff;-webkit-appearance:none;font-weight:500}
+.cli-sel:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--bluel)}
+.cdet{background:var(--s2);border-radius:12px;padding:13px;margin-top:11px;display:none;border:1px solid var(--border)}
+.cdr{display:flex;justify-content:space-between;align-items:center;padding:4px 0}
+.cdr-l{font-size:13px;color:var(--muted)}
+.cdr-v{font-size:14px;font-weight:700}
+.cdr-v.red{color:var(--red)}.cdr-v.blue{color:var(--blue)}.cdr-v.amber{color:var(--amber)}
+/* AMOUNT */
+.amt-sec{text-align:center;padding:16px 0 12px}
+.amt-lbl{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
+.amt-big{font-size:50px;font-weight:800;color:var(--ink);letter-spacing:-3px;line-height:1;display:flex;align-items:flex-start;justify-content:center;gap:5px}
+.amt-cur{font-size:17px;font-weight:700;color:var(--muted);margin-top:9px;letter-spacing:0}
 /* NUMPAD */
-.numpad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
-.np{border:2px solid var(--border);border-radius:14px;padding:15px 10px;font-size:24px;font-weight:700;background:#fff;cursor:pointer;font-family:inherit;color:var(--ink);user-select:none;-webkit-user-select:none;transition:.1s;text-align:center}
+.numpad{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:12px}
+.np{border:2px solid var(--border);border-radius:13px;padding:14px;font-size:23px;font-weight:700;background:#fff;cursor:pointer;font-family:inherit;color:var(--ink);user-select:none;text-align:center;transition:.1s}
 .np:active{background:var(--s3);border-color:var(--blue);transform:scale(.95)}
-.np.act{font-size:16px;background:var(--s2);color:var(--muted);font-weight:600}
-.np.act:active{background:var(--border)}
-
-/* NOTE */
-.note-inp{width:100%;padding:12px 14px;border:2px solid var(--border);border-radius:12px;font-size:15px;font-family:inherit;color:var(--ink);margin-bottom:14px}
-.note-inp:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--bluel)}
-
-/* COLLECT BTN */
-.btn-collect{width:100%;padding:18px;background:var(--green);color:#fff;border:none;border-radius:14px;font-size:18px;font-weight:800;cursor:pointer;font-family:inherit;letter-spacing:-.3px;box-shadow:0 4px 14px rgba(22,163,74,.4);transition:.15s}
-.btn-collect:active{transform:scale(.97)}
-.btn-collect:disabled{opacity:.5;cursor:not-allowed}
-
-/* LOG ITEMS */
-.log-total{background:#fff;border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.lt-v{font-size:26px;font-weight:800;color:var(--green)}
-.lt-l{font-size:12px;color:var(--muted);margin-top:2px}
-.log-item{background:#fff;border-radius:14px;padding:14px 16px;margin-bottom:10px;border:1px solid var(--border);display:flex;align-items:center;gap:14px;box-shadow:0 2px 6px rgba(0,0,0,.05)}
-.li-ic{width:44px;height:44px;border-radius:12px;background:var(--greenl);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.np.act{font-size:15px;background:var(--s2);color:var(--muted);font-weight:600}
+.note-i{width:100%;padding:11px 13px;border:2px solid var(--border);border-radius:11px;font-size:15px;font-family:inherit;color:var(--ink);margin-bottom:12px}
+.note-i:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--bluel)}
+.btn-col{width:100%;padding:17px;background:var(--green);color:#fff;border:none;border-radius:13px;font-size:17px;font-weight:800;cursor:pointer;font-family:inherit;box-shadow:0 4px 14px rgba(22,163,74,.4)}
+.btn-col:active{transform:scale(.97)}
+.btn-col:disabled{opacity:.5;cursor:not-allowed}
+/* LOG */
+.log-tot{background:#fff;border-radius:13px;padding:14px;margin-bottom:10px;border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.lt-v{font-size:24px;font-weight:800;color:var(--green)}
+.lt-l{font-size:11px;color:var(--muted);margin-top:2px}
+.li{background:#fff;border-radius:13px;padding:13px 14px;margin-bottom:8px;border:1px solid var(--border);display:flex;align-items:center;gap:12px}
+.li-ic{width:42px;height:42px;border-radius:11px;background:var(--greenl);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
 .li-info{flex:1;min-width:0}
-.li-name{font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.li-meta{font-size:12px;color:var(--muted);margin-top:2px}
-.li-amt{font-size:20px;font-weight:800;color:var(--green);white-space:nowrap}
-
+.li-name{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.li-meta{font-size:11px;color:var(--muted);margin-top:2px}
+.li-amt{font-size:18px;font-weight:800;color:var(--green);white-space:nowrap}
 /* PENDING */
-.pend-item{background:#fff;border-radius:14px;padding:14px 16px;margin-bottom:10px;border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 6px rgba(0,0,0,.05);cursor:pointer}
-.pend-item:active{transform:scale(.99);background:var(--s2)}
+.pend-it{background:#fff;border-radius:13px;padding:13px 14px;margin-bottom:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.pend-it:active{transform:scale(.99);background:var(--s2)}
 .pi-l{flex:1;min-width:0}
-.pi-name{font-weight:700;font-size:15px}
-.pi-inv{font-size:12px;color:var(--muted);margin-top:2px}
-.pi-r{text-align:right;margin-left:14px;flex-shrink:0}
-.pi-bal{font-size:18px;font-weight:800;color:var(--red)}
-.pi-tag{font-size:11px;font-weight:700;padding:3px 9px;border-radius:10px;margin-top:4px;display:inline-block}
+.pi-name{font-weight:700;font-size:14px}
+.pi-inv{font-size:11px;color:var(--muted);margin-top:2px}
+.pi-due{font-size:11px;margin-top:2px;font-weight:600}
+.pi-r{text-align:right;margin-left:12px;flex-shrink:0}
+.pi-bal{font-size:17px;font-weight:800;color:var(--red)}
+.pi-tag{font-size:11px;font-weight:700;padding:3px 8px;border-radius:9px;margin-top:3px;display:inline-block}
 .tag-ov{background:var(--redl);color:var(--red)}
 .tag-warn{background:var(--amberl);color:var(--amber)}
 .tag-ok{background:var(--greenl);color:var(--green)}
-.done-stamp{font-size:11px;color:var(--green);font-weight:700;margin-top:3px}
-
+.tag-bl{background:#1e293b;color:#f1f5f9}
+.done-st{font-size:11px;color:var(--green);font-weight:700;margin-top:2px}
 /* PROFILE */
-.prof-banner{background:linear-gradient(135deg,#1e3a8a,#7c3aed);border-radius:18px;padding:24px;color:#fff;text-align:center;margin-bottom:14px}
-.prof-av{width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.2);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800;border:3px solid rgba(255,255,255,.3)}
-.prof-name{font-size:23px;font-weight:800}
-.prof-role{font-size:13px;opacity:.65;margin-top:4px}
-.prof-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
-.ps-box{background:rgba(255,255,255,.15);border-radius:12px;padding:14px;text-align:center}
-.ps-v{font-size:20px;font-weight:800}.ps-l{font-size:11px;opacity:.65;margin-top:3px}
-.info-card{background:#fff;border-radius:14px;padding:4px 16px;margin-bottom:12px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.info-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--s3)}
-.info-row:last-child{border-bottom:none}
+.prof-banner{background:linear-gradient(135deg,#1e3a8a,#7c3aed);border-radius:16px;padding:22px;color:#fff;text-align:center;margin-bottom:12px}
+.prof-photo{width:80px;height:80px;border-radius:50%;margin:0 auto 12px;border:3px solid rgba(255,255,255,.35);overflow:hidden;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800}
+.prof-photo img{width:100%;height:100%;object-fit:cover}
+.prof-name{font-size:22px;font-weight:800}
+.prof-role{font-size:13px;opacity:.65;margin-top:3px}
+.prof-stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}
+.ps-box{background:rgba(255,255,255,.15);border-radius:11px;padding:13px;text-align:center}
+.ps-v{font-size:19px;font-weight:800}.ps-l{font-size:10px;opacity:.65;margin-top:2px}
+.info-card{background:#fff;border-radius:13px;padding:4px 14px;margin-bottom:10px;border:1px solid var(--border)}
+.ir{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--s3)}
+.ir:last-child{border-bottom:none}
 .ir-l{font-size:14px;color:var(--muted)}
 .ir-v{font-size:14px;font-weight:700}
-.url-card{background:#fff;border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.url-card label{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px}
-.url-inp{width:100%;padding:11px 13px;border:2px solid var(--border);border-radius:10px;font-size:13px;font-family:monospace;color:var(--ink);margin-bottom:10px}
-.url-inp:focus{outline:none;border-color:var(--blue)}
-.btn-save-url{width:100%;padding:13px;background:var(--blue);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}
-.btn-signout{width:100%;padding:15px;background:var(--redl);color:var(--red);border:none;border-radius:14px;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:4px}
-
+.photo-upload{background:#fff;border-radius:13px;padding:14px;margin-bottom:10px;border:1px solid var(--border)}
+.photo-upload label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:8px}
+.photo-upload input[type=file]{width:100%;font-size:13px}
+.btn-so{width:100%;padding:14px;background:var(--redl);color:var(--red);border:none;border-radius:13px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}
 /* TOAST */
-.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(16px);background:#0f172a;color:#fff;padding:12px 24px;border-radius:30px;font-size:14px;font-weight:600;opacity:0;transition:.3s;z-index:9999;white-space:nowrap;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.toast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%) translateY(16px);background:#0f172a;color:#fff;padding:11px 22px;border-radius:28px;font-size:13px;font-weight:600;opacity:0;transition:.3s;z-index:9999;white-space:nowrap;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,.3)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.toast.g{background:var(--green)}.toast.r{background:var(--red)}
-
-/* EMPTY */
-.empty{text-align:center;padding:48px 20px;color:var(--faint)}
-.empty-ic{font-size:52px;margin-bottom:14px}
-.empty-t{font-size:16px;font-weight:600;color:var(--muted)}
-.empty-s{font-size:13px;margin-top:6px}
-
-.spinner{display:inline-block;width:18px;height:18px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;vertical-align:middle;margin-right:6px}
+.toast.g{background:var(--green)}.toast.r{background:var(--red)}.toast.o{background:var(--amber)}
+.empty{text-align:center;padding:44px 20px;color:var(--faint)}
+.empty-ic{font-size:48px;margin-bottom:12px}
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;vertical-align:middle;margin-right:5px}
 @keyframes spin{to{transform:rotate(360deg)}}
 </style>
 </head>
@@ -172,90 +152,81 @@ html,body{height:100%;background:#f1f5f9;font-family:'Inter',sans-serif;font-siz
 
 <!-- LOGIN -->
 <div class="screen active" id="sLogin">
-  <div class="login-card">
-    <div class="app-icon">💰</div>
-    <div class="login-title">LK <span>Finance</span></div>
-    <div class="login-sub">Daily Collection App</div>
-    <div class="err-box" id="errBox">Wrong password. Try again.</div>
+  <div class="lcard">
+    <div class="app-ic">💰</div>
+    <div class="login-brand">Bhavi <span>Micro Credit</span></div>
+    <div class="login-sub">Collector App</div>
+    <div class="err" id="errBox">Wrong password. Try again.</div>
     <div class="field">
       <label>Your Name</label>
-      <div class="sel-wrap">
-        <select id="nameSelect">
-          <option value="">Select your name...</option>
-          <option value="Sadini">Sadini</option>
-          <option value="Oshan">Oshan</option>
-          <option value="Collector3">Collector 3</option>
-          <option value="Collector4">Collector 4</option>
-          <option value="Collector5">Collector 5</option>
-        </select>
-      </div>
+      <div class="sel-w"><select id="nameSelect">
+        <option value="">Select your name...</option>
+        <option value="Sadini">Sadini</option>
+        <option value="Oshan">Oshan</option>
+        <option value="Collector3">Collector 3</option>
+        <option value="Collector4">Collector 4</option>
+        <option value="Collector5">Collector 5</option>
+      </select></div>
     </div>
-    <div class="field">
-      <label>Password</label>
+    <div class="field"><label>Password</label>
       <input type="password" id="passIn" placeholder="Enter your password" onkeypress="if(event.key==='Enter')login()">
     </div>
-    <button class="btn-signin" onclick="login()">Sign In →</button>
+    <button class="btn-sign" onclick="login()">Sign In →</button>
   </div>
 </div>
 
 <!-- MAIN APP -->
 <div class="screen" id="sApp">
   <div class="topbar">
-    <div class="tb-left">
-      <div class="tb-av" id="tbAv">S</div>
+    <div class="tb-l">
+      <div class="tb-photo" id="tbPhoto"></div>
       <div>
-        <div class="tb-name" id="tbName">Sadini</div>
-        <div class="tb-sub">Collector · LK Finance Pro</div>
+        <div class="tb-name" id="tbName">Collector</div>
+        <div class="tb-role" id="tbRole">Collector</div>
       </div>
     </div>
-    <span class="sync-pill sp-ing" id="syncPill">⟳ Syncing</span>
+    <span class="sync-p sp-ing" id="syncP">⟳ Sync</span>
   </div>
+  <div id="warnAlert" style="display:none" class="warn-alert"></div>
 
   <div class="content" id="content">
-    <!-- COLLECT PAGE -->
     <div class="page on" id="pgCollect">
       <div class="today-banner" id="todayBanner"></div>
       <div class="card">
         <div class="card-hd">Select Client</div>
         <div class="card-bd">
-          <div class="cli-wrap">
-            <select class="cli-select" id="clientSel" onchange="pickClient()">
-              <option value="">Choose a client...</option>
-            </select>
-          </div>
-          <div class="client-detail" id="clientDetail">
-            <div class="cd-row"><span class="cd-lbl">Balance Due</span><span class="cd-val red" id="cd-bal">—</span></div>
-            <div class="cd-row"><span class="cd-lbl">Daily Amount</span><span class="cd-val blue" id="cd-daily">—</span></div>
-            <div class="cd-row"><span class="cd-lbl">Invoice</span><span class="cd-val" id="cd-inv">—</span></div>
-            <div class="cd-row"><span class="cd-lbl">Due Date</span><span class="cd-val" id="cd-due">—</span></div>
+          <div class="cli-w"><select class="cli-sel" id="cliSel" onchange="pickCli()">
+            <option value="">Choose a client...</option>
+          </select></div>
+          <div class="cdet" id="cdet">
+            <div class="cdr"><span class="cdr-l">Balance Due</span><span class="cdr-v red" id="cd-bal">—</span></div>
+            <div class="cdr"><span class="cdr-l">Daily Amount</span><span class="cdr-v blue" id="cd-daily">—</span></div>
+            <div class="cdr"><span class="cdr-l">Invoice</span><span class="cdr-v" id="cd-inv">—</span></div>
+            <div class="cdr"><span class="cdr-l">Due Date</span><span class="cdr-v" id="cd-due">—</span></div>
+            <div class="cdr"><span class="cdr-l">Days Past Due</span><span class="cdr-v amber" id="cd-dpd">—</span></div>
           </div>
         </div>
       </div>
       <div class="card" id="amtCard" style="display:none">
         <div class="card-bd">
-          <div class="amt-section">
+          <div class="amt-sec">
             <div class="amt-lbl">Amount Collected</div>
             <div class="amt-big"><span class="amt-cur">LKR</span><span id="amtDisp">0</span></div>
           </div>
           <div class="numpad" id="numpad"></div>
-          <input class="note-inp" id="noteIn" placeholder="Note (optional) — e.g. Partial payment">
+          <input class="note-i" id="noteIn" placeholder="Note (optional)">
           <div id="colAlert" style="margin-bottom:10px"></div>
-          <button class="btn-collect" id="colBtn" onclick="collect()">✓ Record Collection</button>
+          <button class="btn-col" id="colBtn" onclick="collect()">✓ Record Collection</button>
         </div>
       </div>
     </div>
 
-    <!-- LOG PAGE -->
     <div class="page" id="pgLog"><div id="logContent"></div></div>
-
-    <!-- PENDING PAGE -->
     <div class="page" id="pgPending"><div id="pendContent"></div></div>
-
-    <!-- PROFILE PAGE -->
     <div class="page" id="pgProfile"><div id="profContent"></div></div>
   </div>
 
-  <nav class="bottom-nav">
+  <nav class="bnav">
     <button class="bn on" id="bn0" onclick="showPage(0)"><span class="bn-ic">💳</span><span class="bn-lb">Collect</span></button>
     <button class="bn"    id="bn1" onclick="showPage(1)"><span class="bn-ic">📋</span><span class="bn-lb">Today</span></button>
     <button class="bn"    id="bn2" onclick="showPage(2)"><span class="bn-ic">⏳</span><span class="bn-lb">Pending</span></button>
@@ -267,17 +238,30 @@ html,body{height:100%;background:#f1f5f9;font-family:'Inter',sans-serif;font-siz
 
 <script>
 const PW={Sadini:'sadini123',Oshan:'oshan123',Collector3:'col3pass',Collector4:'col4pass',Collector5:'col5pass'};
-const SEED=[{"id":1,"customer":"Isanka","invoice":"CRD0002","invoiceDate":"2025-05-23","dueDate":"2025-07-23","interest":3000.0,"daysRemaining":0,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed"},{"id":2,"customer":"Kumari","invoice":"CRD0003","invoiceDate":"2025-06-05","dueDate":"2025-08-05","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":3,"customer":"Rosi","invoice":"CRD0004","invoiceDate":"2025-06-08","dueDate":"2025-08-08","interest":5000.0,"daysRemaining":0,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed"},{"id":4,"customer":"Dimuthu","invoice":"CRD0005","invoiceDate":"2025-06-16","dueDate":"2025-08-16","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":5,"customer":"Jayantha 3weel","invoice":"CRD0006","invoiceDate":"2025-06-20","dueDate":"2025-08-20","interest":5000.0,"daysRemaining":0,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed"},{"id":6,"customer":"Thilini","invoice":"CRD0007","invoiceDate":"2025-06-21","dueDate":"2025-08-21","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":7,"customer":"Pradeep","invoice":"CRD0008","invoiceDate":"2025-06-22","dueDate":"2025-08-22","interest":1000.0,"daysRemaining":0,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed"},{"id":8,"customer":"Sudda Mama","invoice":"CRD0009","invoiceDate":"2025-07-13","dueDate":"2025-09-12","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":9,"customer":"Sudu Mama","invoice":"CRD0010","invoiceDate":"2025-07-16","dueDate":"2025-09-15","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":10,"customer":"Isanka","invoice":"CRD0011","invoiceDate":"2025-07-27","dueDate":"2025-09-26","interest":5000.0,"daysRemaining":0,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed"},{"id":11,"customer":"Gayani","invoice":"CRD0012","invoiceDate":"2025-07-30","dueDate":"2025-09-29","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":12,"customer":"Gayani","invoice":"CRD0013","invoiceDate":"2025-08-01","dueDate":"2025-10-01","interest":3000.0,"daysRemaining":0,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed"},{"id":13,"customer":"Piyal","invoice":"CRD0014","invoiceDate":"2025-08-01","dueDate":"2025-10-01","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":14,"customer":"Kumari","invoice":"CRD0015","invoiceDate":"2025-08-03","dueDate":"2025-10-03","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":15,"customer":"Rosi","invoice":"CRD0016","invoiceDate":"2025-08-03","dueDate":"2025-10-03","interest":5000.0,"daysRemaining":0,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed"},{"id":16,"customer":"Rasika","invoice":"CRD0017","invoiceDate":"2025-08-04","dueDate":"2025-10-04","interest":5000.0,"daysRemaining":0,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed"},{"id":17,"customer":"Samadi","invoice":"CRD0018","invoiceDate":"2025-08-13","dueDate":"2025-10-13","interest":1000.0,"daysRemaining":0,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed"},{"id":18,"customer":"Shalani","invoice":"CRD0019","invoiceDate":"2025-08-14","dueDate":"2025-10-14","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":19,"customer":"Ranga","invoice":"CRD0020","invoiceDate":"2025-08-15","dueDate":"2025-10-15","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":20,"customer":"Madushi","invoice":"CRD0021","invoiceDate":"2025-08-17","dueDate":"2025-10-17","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":21,"customer":"Nimesha","invoice":"CRD0022","invoiceDate":"2025-08-17","dueDate":"2025-10-17","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":22,"customer":"Pradeep","invoice":"CRD0023","invoiceDate":"2025-08-20","dueDate":"2025-10-20","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":23,"customer":"Thilini","invoice":"CRD0024","invoiceDate":"2025-08-20","dueDate":"2025-10-20","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":24,"customer":"Dimuthu","invoice":"CRD0025","invoiceDate":"2025-08-25","dueDate":"2025-10-25","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":25,"customer":"Prasanna","invoice":"CRD0026","invoiceDate":"2025-08-25","dueDate":"2025-10-25","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":26,"customer":"Helan Saloon","invoice":"CRD0027","invoiceDate":"2025-08-25","dueDate":"2025-10-25","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":27,"customer":"Ayesha","invoice":"CRD0028","invoiceDate":"2025-09-08","dueDate":"2025-11-08","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":28,"customer":"Niluka","invoice":"CRD0029","invoiceDate":"2025-09-10","dueDate":"2025-11-10","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":29,"customer":"Sudu Mama","invoice":"CRD0030","invoiceDate":"2025-09-12","dueDate":"2025-11-12","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":30,"customer":"Piyal","invoice":"CRD0031","invoiceDate":"2025-09-26","dueDate":"2025-11-26","interest":5000.0,"daysRemaining":0,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed"},{"id":31,"customer":"Isanka","invoice":"CRD0032","invoiceDate":"2025-09-30","dueDate":"2025-11-30","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":32,"customer":"Samadi","invoice":"CRD0033","invoiceDate":"2025-09-30","dueDate":"2025-11-30","interest":1000.0,"daysRemaining":0,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed"},{"id":33,"customer":"Shalani","invoice":"CRD0034","invoiceDate":"2025-09-30","dueDate":"2025-11-30","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":34,"customer":"Thilini","invoice":"CRD0035","invoiceDate":"2025-10-02","dueDate":"2025-12-02","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":35,"customer":"Gayani","invoice":"CRD0036","invoiceDate":"2025-10-05","dueDate":"2025-12-05","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":36,"customer":"Rosi","invoice":"CRD0037","invoiceDate":"2025-10-10","dueDate":"2025-12-10","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":37,"customer":"Sadamali","invoice":"CRD0038","invoiceDate":"2025-10-10","dueDate":"2025-12-10","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":38,"customer":"Helan Saloon","invoice":"CRD0039","invoiceDate":"2025-10-14","dueDate":"2025-12-14","interest":20000.0,"daysRemaining":0,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed"},{"id":39,"customer":"Ayesha","invoice":"CRD0040","invoiceDate":"2025-10-17","dueDate":"2025-12-17","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":40,"customer":"Akma","invoice":"CRD0041","invoiceDate":"2025-10-18","dueDate":"2025-12-18","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":41,"customer":"Gali Suranga","invoice":"CRD0042","invoiceDate":"2025-10-18","dueDate":"2025-12-18","interest":1000.0,"daysRemaining":0,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed"},{"id":42,"customer":"Bus Ranga","invoice":"CRD0043","invoiceDate":"2025-10-19","dueDate":"2025-12-19","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":43,"customer":"Nimal","invoice":"CRD0044","invoiceDate":"2025-10-19","dueDate":"2025-12-19","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":44,"customer":"Saranga","invoice":"CRD0045","invoiceDate":"2025-10-21","dueDate":"2025-12-21","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":45,"customer":"Chaminda","invoice":"CRD0046","invoiceDate":"2025-10-21","dueDate":"2025-12-21","interest":3000.0,"daysRemaining":0,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed"},{"id":46,"customer":"Shantha","invoice":"CRD0047","invoiceDate":"2025-10-21","dueDate":"2025-12-21","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":47,"customer":"Ganga","invoice":"CRD0048","invoiceDate":"2025-10-22","dueDate":"2025-12-22","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":48,"customer":"Pradeep","invoice":"CRD0049","invoiceDate":"2025-10-22","dueDate":"2025-12-22","interest":1000.0,"daysRemaining":0,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed"},{"id":49,"customer":"Udeni","invoice":"CRD0050","invoiceDate":"2025-10-22","dueDate":"2025-12-22","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":50,"customer":"Bindu Kade","invoice":"CRD0051","invoiceDate":"2025-10-23","dueDate":"2025-12-23","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":51,"customer":"Kade Ranga","invoice":"CRD0052","invoiceDate":"2025-10-23","dueDate":"2025-12-23","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":52,"customer":"Bus Chaminda","invoice":"CRD0053","invoiceDate":"2025-10-27","dueDate":"2025-12-27","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":53,"customer":"Chamara","invoice":"CRD0054","invoiceDate":"2025-10-27","dueDate":"2025-12-27","interest":4000.0,"daysRemaining":6,"paidDays":54,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":21600.0,"balance":2400.0,"status":"Active"},{"id":54,"customer":"Jaanaka","invoice":"CRD0055","invoiceDate":"2025-10-27","dueDate":"2025-12-27","interest":5000.0,"daysRemaining":0,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed"},{"id":55,"customer":"Saasthara Gedara","invoice":"CRD0056","invoiceDate":"2025-10-27","dueDate":"2025-12-27","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":56,"customer":"Manoj","invoice":"CRD0057","invoiceDate":"2025-10-30","dueDate":"2025-12-30","interest":10000.0,"daysRemaining":20,"paidDays":40,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":57,"customer":"Prasanna","invoice":"CRD0058","invoiceDate":"2025-10-30","dueDate":"2025-12-30","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":58,"customer":"Gayan","invoice":"CRD0059","invoiceDate":"2025-11-01","dueDate":"2026-01-01","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":59,"customer":"A.P Malu Kade","invoice":"CRD0060","invoiceDate":"2025-11-03","dueDate":"2026-01-03","interest":20000.0,"daysRemaining":0,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed"},{"id":60,"customer":"Ranji Mama","invoice":"CRD0061","invoiceDate":"2025-11-03","dueDate":"2026-01-03","interest":4000.0,"daysRemaining":11,"paidDays":49,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":19600.0,"balance":4400.0,"status":"Active"},{"id":61,"customer":"Shehan","invoice":"CRD0062","invoiceDate":"2025-11-06","dueDate":"2026-01-06","interest":20000.0,"daysRemaining":0,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed"},{"id":62,"customer":"Nilanga","invoice":"CRD0063","invoiceDate":"2025-11-06","dueDate":"2026-01-06","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":63,"customer":"Shalani","invoice":"CRD0064","invoiceDate":"2025-11-08","dueDate":"2026-01-08","interest":12000.0,"daysRemaining":0,"paidDays":60,"principal":60000.0,"totalWithInterest":72000.0,"totalPaid":72000.0,"balance":0.0,"status":"Closed"},{"id":64,"customer":"Samadi","invoice":"CRD0065","invoiceDate":"2025-11-08","dueDate":"2026-01-08","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":65,"customer":"Pathum","invoice":"CRD0066","invoiceDate":"2025-11-08","dueDate":"2026-01-08","interest":30000.0,"daysRemaining":0,"paidDays":60,"principal":150000.0,"totalWithInterest":180000.0,"totalPaid":180000.0,"balance":0.0,"status":"Closed"},{"id":66,"customer":"Angoda Elawalu Kade","invoice":"CRD0067","invoiceDate":"2025-11-10","dueDate":"2026-01-10","interest":40000.0,"daysRemaining":0,"paidDays":60,"principal":200000.0,"totalWithInterest":240000.0,"totalPaid":240000.0,"balance":0.0,"status":"Closed"},{"id":67,"customer":"Ganga","invoice":"CRD0068","invoiceDate":"2025-11-15","dueDate":"2026-01-15","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":68,"customer":"Mas Kade Raja","invoice":"CRD0069","invoiceDate":"2025-11-15","dueDate":"2026-01-15","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":69,"customer":"Kasun Angoda","invoice":"CRD0070","invoiceDate":"2025-11-15","dueDate":"2026-01-15","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":70,"customer":"Tharidu","invoice":"CRD0071","invoiceDate":"2025-11-18","dueDate":"2026-01-18","interest":4000.0,"daysRemaining":17,"paidDays":43,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":17200.0,"balance":6800.0,"status":"Active"},{"id":71,"customer":"Jana","invoice":"CRD0072","invoiceDate":"2025-11-19","dueDate":"2026-01-19","interest":3000.0,"daysRemaining":0,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed"},{"id":72,"customer":"Thamali","invoice":"CRD0073","invoiceDate":"2025-11-20","dueDate":"2026-01-20","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":73,"customer":"Chita Aiya","invoice":"CRD0074","invoiceDate":"2025-11-22","dueDate":"2026-01-22","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":74,"customer":"Madu Nanda","invoice":"CRD0075","invoiceDate":"2025-11-22","dueDate":"2026-01-22","interest":1000.0,"daysRemaining":0,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed"},{"id":75,"customer":"Piyal","invoice":"CRD0076","invoiceDate":"2025-11-23","dueDate":"2026-01-23","interest":20000.0,"daysRemaining":1,"paidDays":59,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":118000.0,"balance":2000.0,"status":"Active"},{"id":76,"customer":"Akma","invoice":"CRD0077","invoiceDate":"2025-11-23","dueDate":"2026-01-23","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":77,"customer":"Shani Nangi","invoice":"CRD0078","invoiceDate":"2025-11-25","dueDate":"2026-01-25","interest":8000.0,"daysRemaining":0,"paidDays":60,"principal":40000.0,"totalWithInterest":48000.0,"totalPaid":48000.0,"balance":0.0,"status":"Closed"},{"id":78,"customer":"Helan Saloon","invoice":"CRD0079","invoiceDate":"2025-11-25","dueDate":"2026-01-25","interest":6333.33,"daysRemaining":41,"paidDays":19,"principal":31666.67,"totalWithInterest":38000.0,"totalPaid":38000.0,"balance":0.0,"status":"Closed"},{"id":79,"customer":"Gali Suranga","invoice":"CRD0080","invoiceDate":"2025-11-25","dueDate":"2026-01-25","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":80,"customer":"Sameera","invoice":"CRD0081","invoiceDate":"2025-11-26","dueDate":"2026-01-26","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":81,"customer":"Walanda Hotel","invoice":"CRD0082","invoiceDate":"2025-11-26","dueDate":"2026-01-26","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":82,"customer":"Madushi","invoice":"CRD0083","invoiceDate":"2025-11-27","dueDate":"2026-01-27","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":83,"customer":"Jayasekara","invoice":"CRD0084","invoiceDate":"2025-11-27","dueDate":"2026-01-27","interest":6000.0,"daysRemaining":1,"paidDays":59,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":35400.0,"balance":600.0,"status":"Active"},{"id":84,"customer":"Shantha Mama","invoice":"CRD0085","invoiceDate":"2025-11-29","dueDate":"2026-01-29","interest":6000.0,"daysRemaining":1,"paidDays":59,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":35400.0,"balance":600.0,"status":"Active"},{"id":85,"customer":"Gayani","invoice":"CRD0086","invoiceDate":"2025-12-08","dueDate":"2026-02-07","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":86,"customer":"Udeni","invoice":"CRD0087","invoiceDate":"2025-12-08","dueDate":"2026-02-07","interest":3000.0,"daysRemaining":0,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed"},{"id":87,"customer":"Rosi Akka","invoice":"CRD0088","invoiceDate":"2025-12-08","dueDate":"2026-02-07","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":88,"customer":"Pradeep","invoice":"CRD0089","invoiceDate":"2025-12-11","dueDate":"2026-02-10","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":89,"customer":"Thilini","invoice":"CRD0090","invoiceDate":"2025-12-14","dueDate":"2026-02-13","interest":6000.0,"daysRemaining":28,"paidDays":32,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":19200.0,"balance":16800.0,"status":"Active"},{"id":90,"customer":"Nirmala","invoice":"CRD0091","invoiceDate":"2025-12-14","dueDate":"2026-02-13","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":91,"customer":"Aloka Light Kade","invoice":"CRD0092","invoiceDate":"2025-12-20","dueDate":"2026-02-19","interest":10000.0,"daysRemaining":30,"paidDays":30,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":30000.0,"balance":30000.0,"status":"Active"},{"id":92,"customer":"Kumara Wade Kade","invoice":"CRD0093","invoiceDate":"2025-12-21","dueDate":"2026-02-20","interest":20000.0,"daysRemaining":0,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed"},{"id":93,"customer":"Pathum Golaya","invoice":"CRD0094","invoiceDate":"2025-12-21","dueDate":"2026-02-20","interest":5000.0,"daysRemaining":51,"paidDays":9,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":4500.0,"balance":25500.0,"status":"Active"},{"id":94,"customer":"Shalini","invoice":"CRD0095","invoiceDate":"2025-12-22","dueDate":"2026-02-21","interest":40000.0,"daysRemaining":25,"paidDays":35,"principal":200000.0,"totalWithInterest":240000.0,"totalPaid":140000.0,"balance":100000.0,"status":"Active"},{"id":95,"customer":"Nethmi","invoice":"CRD0096","invoiceDate":"2025-12-22","dueDate":"2026-02-21","interest":8000.0,"daysRemaining":0,"paidDays":60,"principal":40000.0,"totalWithInterest":48000.0,"totalPaid":48000.0,"balance":0.0,"status":"Closed"},{"id":96,"customer":"Nilushi","invoice":"CRD0097","invoiceDate":"2025-12-22","dueDate":"2026-02-21","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":97,"customer":"Thushari Malabe Redi Kade","invoice":"CRD0098","invoiceDate":"2025-12-24","dueDate":"2026-02-23","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":98,"customer":"Ayesha","invoice":"CRD0099","invoiceDate":"2025-12-27","dueDate":"2026-02-26","interest":6000.0,"daysRemaining":33,"paidDays":27,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":16200.0,"balance":19800.0,"status":"Active"},{"id":99,"customer":"Punsika Kumara","invoice":"CRD0100","invoiceDate":"2025-12-27","dueDate":"2026-02-26","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":100,"customer":"Suji Akka","invoice":"CRD0101","invoiceDate":"2025-12-27","dueDate":"2026-02-26","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":101,"customer":"Gayani Manju","invoice":"CRD0102","invoiceDate":"2025-12-31","dueDate":"2026-03-02","interest":5000.0,"daysRemaining":0,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed"},{"id":102,"customer":"Amantha Tatoo","invoice":"CRD0103","invoiceDate":"2025-12-31","dueDate":"2026-03-02","interest":6000.0,"daysRemaining":19,"paidDays":41,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":24600.0,"balance":11400.0,"status":"Active"},{"id":103,"customer":"Malabe Shoe Shop","invoice":"CRD0104","invoiceDate":"2026-01-04","dueDate":"2026-03-06","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":104,"customer":"Pathum","invoice":"CRD0105","invoiceDate":"2026-01-05","dueDate":"2026-03-07","interest":30000.0,"daysRemaining":4,"paidDays":56,"principal":150000.0,"totalWithInterest":180000.0,"totalPaid":168000.0,"balance":12000.0,"status":"Active"},{"id":105,"customer":"Sanjana Kumari","invoice":"CRD0106","invoiceDate":"2026-01-07","dueDate":"2026-03-09","interest":20000.0,"daysRemaining":5,"paidDays":55,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":110000.0,"balance":10000.0,"status":"Active"},{"id":106,"customer":"Raja Mas Kade","invoice":"CRD0107","invoiceDate":"2026-01-07","dueDate":"2026-03-09","interest":10000.0,"daysRemaining":58,"paidDays":2,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":2000.0,"balance":58000.0,"status":"Active"},{"id":107,"customer":"Tharika","invoice":"CRD0108","invoiceDate":"2026-01-07","dueDate":"2026-03-09","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":108,"customer":"Walada Kade Golaya","invoice":"CRD0109","invoiceDate":"2026-01-10","dueDate":"2026-03-12","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":109,"customer":"Manoj","invoice":"CRD0110","invoiceDate":"2026-01-10","dueDate":"2026-03-12","interest":1000.0,"daysRemaining":50,"paidDays":10,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed"},{"id":110,"customer":"Koria Sameera","invoice":"CRD0111","invoiceDate":"2026-01-11","dueDate":"2026-03-13","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":111,"customer":"Sadamali","invoice":"CRD0112","invoiceDate":"2026-01-15","dueDate":"2026-03-17","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":112,"customer":"Punsika Kumara","invoice":"CRD0113","invoiceDate":"2026-01-16","dueDate":"2026-03-18","interest":20000.0,"daysRemaining":0,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed"},{"id":113,"customer":"Malabe Pola Kumari","invoice":"CRD0114","invoiceDate":"2026-01-18","dueDate":"2026-03-20","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":114,"customer":"Nilushi","invoice":"CRD0115","invoiceDate":"2026-01-18","dueDate":"2026-03-20","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":115,"customer":"Samadi","invoice":"CRD0116","invoiceDate":"2026-01-20","dueDate":"2026-03-22","interest":3000.0,"daysRemaining":0,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed"},{"id":116,"customer":"Isanka","invoice":"CRD0117","invoiceDate":"2026-01-26","dueDate":"2026-03-28","interest":5000.0,"daysRemaining":0,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed"},{"id":117,"customer":"Ganga","invoice":"CRD0118","invoiceDate":"2026-01-26","dueDate":"2026-03-28","interest":10000.0,"daysRemaining":6,"paidDays":54,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":54000.0,"balance":6000.0,"status":"Active"},{"id":118,"customer":"Malith Post Office","invoice":"CRD0119","invoiceDate":"2026-01-26","dueDate":"2026-03-28","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":119,"customer":"Saranga","invoice":"CRD0120","invoiceDate":"2026-01-26","dueDate":"2026-03-28","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":120,"customer":"Chaminda","invoice":"CRD0121","invoiceDate":"2026-01-29","dueDate":"2026-03-31","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":121,"customer":"Nimal","invoice":"CRD0122","invoiceDate":"2026-01-29","dueDate":"2026-03-31","interest":6000.0,"daysRemaining":39,"paidDays":21,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":12600.0,"balance":23400.0,"status":"Active"},{"id":122,"customer":"Kasun","invoice":"CRD0123","invoiceDate":"2026-01-29","dueDate":"2026-03-31","interest":4000.0,"daysRemaining":37,"paidDays":23,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":9200.0,"balance":14800.0,"status":"Active"},{"id":123,"customer":"Dulaj (Nimesh)","invoice":"CRD0124","invoiceDate":"2026-02-02","dueDate":"2026-04-04","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":124,"customer":"Murukkuwa","invoice":"CRD0125","invoiceDate":"2026-02-03","dueDate":"2026-04-05","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":125,"customer":"Akma","invoice":"CRD0126","invoiceDate":"2026-02-03","dueDate":"2026-04-05","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":126,"customer":"Malabe Pola Kumari","invoice":"CRD0127","invoiceDate":"2026-02-03","dueDate":"2026-04-05","interest":10000.0,"daysRemaining":15,"paidDays":45,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":45000.0,"balance":15000.0,"status":"Active"},{"id":127,"customer":"Rosi Akka","invoice":"CRD0128","invoiceDate":"2026-02-03","dueDate":"2026-04-05","interest":12000.0,"daysRemaining":29,"paidDays":31,"principal":60000.0,"totalWithInterest":72000.0,"totalPaid":37200.0,"balance":34800.0,"status":"Active"},{"id":128,"customer":"Gamini","invoice":"CRD0129","invoiceDate":"2026-02-09","dueDate":"2026-04-11","interest":6000.0,"daysRemaining":12,"paidDays":48,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":28800.0,"balance":7200.0,"status":"Active"},{"id":129,"customer":"Gayani","invoice":"CRD0130","invoiceDate":"2026-02-10","dueDate":"2026-04-12","interest":20000.0,"daysRemaining":33,"paidDays":27,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":54000.0,"balance":66000.0,"status":"Active"},{"id":130,"customer":"Sameera 2","invoice":"CRD0131","invoiceDate":"2026-02-11","dueDate":"2026-04-13","interest":10000.0,"daysRemaining":55,"paidDays":5,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":5000.0,"balance":55000.0,"status":"Active"},{"id":131,"customer":"Saliya","invoice":"CRD0132","invoiceDate":"2026-02-11","dueDate":"2026-04-13","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":132,"customer":"Sudu Malli","invoice":"CRD0133","invoiceDate":"2026-02-12","dueDate":"2026-04-14","interest":4000.0,"daysRemaining":2,"paidDays":58,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":23200.0,"balance":800.0,"status":"Active"},{"id":133,"customer":"Malabe Pathum Malli","invoice":"CRD0134","invoiceDate":"2026-02-12","dueDate":"2026-04-14","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":134,"customer":"Nirmala","invoice":"CRD0135","invoiceDate":"2026-02-14","dueDate":"2026-04-16","interest":3000.0,"daysRemaining":0,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed"},{"id":135,"customer":"NC Driver","invoice":"CRD0136","invoiceDate":"2026-02-14","dueDate":"2026-04-16","interest":5000.0,"daysRemaining":34,"paidDays":26,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":13000.0,"balance":17000.0,"status":"Active"},{"id":136,"customer":"Sihina Patikki Bus","invoice":"CRD0137","invoiceDate":"2026-02-26","dueDate":"2026-04-28","interest":20000.0,"daysRemaining":51,"paidDays":9,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":18000.0,"balance":102000.0,"status":"Active"},{"id":137,"customer":"Thilina Malli","invoice":"CRD0138","invoiceDate":"2026-02-26","dueDate":"2026-04-28","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":138,"customer":"Tharika","invoice":"CRD0139","invoiceDate":"2026-02-20","dueDate":"2026-04-22","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":139,"customer":"Priyanga","invoice":"CRD0140","invoiceDate":"2026-02-20","dueDate":"2026-04-22","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":140,"customer":"Kumara Wade Kade","invoice":"CRD0141","invoiceDate":"2026-02-20","dueDate":"2026-04-22","interest":30000.0,"daysRemaining":23,"paidDays":37,"principal":150000.0,"totalWithInterest":180000.0,"totalPaid":111000.0,"balance":69000.0,"status":"Active"},{"id":141,"customer":"Helan Saloon","invoice":"CRD0142","invoiceDate":"2026-02-19","dueDate":"2026-04-21","interest":20000.0,"daysRemaining":43,"paidDays":17,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":34000.0,"balance":86000.0,"status":"Active"},{"id":142,"customer":"Gali Suranga","invoice":"CRD0143","invoiceDate":"2026-02-19","dueDate":"2026-04-21","interest":8000.0,"daysRemaining":0,"paidDays":60,"principal":40000.0,"totalWithInterest":48000.0,"totalPaid":48000.0,"balance":0.0,"status":"Closed"},{"id":143,"customer":"Manoj","invoice":"CRD0144","invoiceDate":"2026-03-01","dueDate":"2026-05-01","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":144,"customer":"Saliya","invoice":"CRD0145","invoiceDate":"2026-03-06","dueDate":"2026-05-06","interest":20000.0,"daysRemaining":0,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed"},{"id":145,"customer":"Nande Time Keeper","invoice":"CRD0146","invoiceDate":"2026-02-24","dueDate":"2026-04-26","interest":5000.0,"daysRemaining":50,"paidDays":10,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":5000.0,"balance":25000.0,"status":"Active"},{"id":146,"customer":"Dhanushka","invoice":"CRD0147","invoiceDate":"2026-02-26","dueDate":"2026-04-28","interest":5000.0,"daysRemaining":40,"paidDays":20,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":10000.0,"balance":20000.0,"status":"Active"},{"id":147,"customer":"Kalpa","invoice":"CRD0148","invoiceDate":"2026-02-26","dueDate":"2026-04-28","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":148,"customer":"Dulaj (Nimesh)","invoice":"CRD0149","invoiceDate":"2026-02-15","dueDate":"2026-04-17","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":149,"customer":"Malith Post Office","invoice":"CRD0150","invoiceDate":"2026-03-09","dueDate":"2026-05-09","interest":20000.0,"daysRemaining":0,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed"},{"id":150,"customer":"Pradeep (Sameera Aiya)","invoice":"CRD0151","invoiceDate":"2026-03-09","dueDate":"2026-05-09","interest":4000.0,"daysRemaining":52,"paidDays":8,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":3200.0,"balance":20800.0,"status":"Active"},{"id":151,"customer":"Madusanka","invoice":"CRD0152","invoiceDate":"2026-03-09","dueDate":"2026-05-09","interest":10000.0,"daysRemaining":54,"paidDays":6,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":6000.0,"balance":54000.0,"status":"Active"},{"id":152,"customer":"Malabe Bus Sanjeewa","invoice":"CRD0153","invoiceDate":"2026-03-12","dueDate":"2026-05-12","interest":4000.0,"daysRemaining":19,"paidDays":41,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":16400.0,"balance":7600.0,"status":"Active"},{"id":153,"customer":"Samadi","invoice":"CRD0154","invoiceDate":"2026-03-14","dueDate":"2026-05-14","interest":5000.0,"daysRemaining":18,"paidDays":42,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":21000.0,"balance":9000.0,"status":"Active"},{"id":154,"customer":"Malabe John","invoice":"CRD0155","invoiceDate":"2026-03-15","dueDate":"2026-05-15","interest":15000.0,"daysRemaining":31,"paidDays":29,"principal":75000.0,"totalWithInterest":90000.0,"totalPaid":43500.0,"balance":46500.0,"status":"Active"},{"id":155,"customer":"Kalpa Malabe","invoice":"CRD0156","invoiceDate":"2026-03-15","dueDate":"2026-05-15","interest":6000.0,"daysRemaining":1,"paidDays":59,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":35400.0,"balance":600.0,"status":"Active"},{"id":156,"customer":"Madushi","invoice":"CRD0157","invoiceDate":"2026-03-15","dueDate":"2026-05-15","interest":2000.0,"daysRemaining":10,"paidDays":50,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":10000.0,"balance":2000.0,"status":"Active"},{"id":157,"customer":"Punsika Kumara","invoice":"CRD0158","invoiceDate":"2026-03-19","dueDate":"2026-05-19","interest":20000.0,"daysRemaining":39,"paidDays":21,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":42000.0,"balance":78000.0,"status":"Active"},{"id":158,"customer":"Babi Akka","invoice":"CRD0159","invoiceDate":"2026-03-21","dueDate":"2026-05-21","interest":3000.0,"daysRemaining":14,"paidDays":46,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":13800.0,"balance":4200.0,"status":"Active"},{"id":159,"customer":"Bharatha","invoice":"CRD0160","invoiceDate":"2026-03-19","dueDate":"2026-05-19","interest":4000.0,"daysRemaining":31,"paidDays":29,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":11600.0,"balance":12400.0,"status":"Active"},{"id":160,"customer":"Koria Sameera","invoice":"CRD0161","invoiceDate":"2026-03-21","dueDate":"2026-05-21","interest":10000.0,"daysRemaining":60,"paidDays":0,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":0.0,"balance":60000.0,"status":"Active"},{"id":161,"customer":"Samidi Nangi","invoice":"CRD0162","invoiceDate":"2026-03-21","dueDate":"2026-05-21","interest":6000.0,"daysRemaining":48,"paidDays":12,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":7200.0,"balance":28800.0,"status":"Active"},{"id":162,"customer":"Sudu Mama","invoice":"CRD0163","invoiceDate":"2026-03-22","dueDate":"2026-05-22","interest":2000.0,"daysRemaining":60,"paidDays":0,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":0.0,"balance":12000.0,"status":"Active"},{"id":163,"customer":"Aayachana Chaminda","invoice":"CRD0164","invoiceDate":"2026-03-25","dueDate":"2026-05-25","interest":6000.0,"daysRemaining":0,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed"},{"id":164,"customer":"Malabe Bus Golaya","invoice":"CRD0165","invoiceDate":"2026-03-25","dueDate":"2026-05-25","interest":4000.0,"daysRemaining":34,"paidDays":26,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":10400.0,"balance":13600.0,"status":"Active"},{"id":165,"customer":"Malabe Mohan","invoice":"CRD0166","invoiceDate":"2026-03-25","dueDate":"2026-05-25","interest":4000.0,"daysRemaining":0,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed"},{"id":166,"customer":"Gayani Manju","invoice":"CRD0167","invoiceDate":"2026-03-25","dueDate":"2026-05-25","interest":5000.0,"daysRemaining":49,"paidDays":11,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":5500.0,"balance":24500.0,"status":"Active"},{"id":167,"customer":"Gali Suranga","invoice":"CRD0168","invoiceDate":"2026-03-30","dueDate":"2026-05-30","interest":20000.0,"daysRemaining":50,"paidDays":10,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":20000.0,"balance":100000.0,"status":"Active"},{"id":168,"customer":"Tharika","invoice":"CRD0169","invoiceDate":"2026-04-26","dueDate":"2026-06-26","interest":20000.0,"daysRemaining":54,"paidDays":6,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":12000.0,"balance":108000.0,"status":"Active"},{"id":169,"customer":"Faluda","invoice":"CRD0170","invoiceDate":"2026-04-26","dueDate":"2026-06-26","interest":6000.0,"daysRemaining":47,"paidDays":13,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":7800.0,"balance":28200.0,"status":"Active"},{"id":170,"customer":"Niluka","invoice":"CRD0171","invoiceDate":"2026-04-26","dueDate":"2026-06-26","interest":3000.0,"daysRemaining":41,"paidDays":19,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":5700.0,"balance":12300.0,"status":"Active"},{"id":171,"customer":"Kumari Chita","invoice":"CRD0172","invoiceDate":"2026-04-26","dueDate":"2026-06-26","interest":2000.0,"daysRemaining":28,"paidDays":32,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":6400.0,"balance":5600.0,"status":"Active"},{"id":172,"customer":"Nilushi","invoice":"CRD0173","invoiceDate":"2026-04-25","dueDate":"2026-06-25","interest":4000.0,"daysRemaining":10,"paidDays":50,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":20000.0,"balance":4000.0,"status":"Active"},{"id":173,"customer":"Dulaj (Nimesh)","invoice":"CRD0174","invoiceDate":"2026-04-24","dueDate":"2026-06-24","interest":10000.0,"daysRemaining":60,"paidDays":0,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":0.0,"balance":60000.0,"status":"Active"},{"id":174,"customer":"Pathum Malli Malabe","invoice":"CRD0175","invoiceDate":"2026-04-27","dueDate":"2026-06-27","interest":2000.0,"daysRemaining":0,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed"},{"id":175,"customer":"Rasika Akka","invoice":"CRD0176","invoiceDate":"2026-04-26","dueDate":"2026-06-26","interest":3000.0,"daysRemaining":38,"paidDays":22,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":6600.0,"balance":11400.0,"status":"Active"},{"id":176,"customer":"Pinthaliya pol Kade","invoice":"CRD0177","invoiceDate":"2026-05-03","dueDate":"2026-07-03","interest":10000.0,"daysRemaining":0,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed"},{"id":177,"customer":"Welivita Mas Kade","invoice":"CRD0178","invoiceDate":"2026-05-06","dueDate":"2026-07-06","interest":30000.0,"daysRemaining":41,"paidDays":19,"principal":150000.0,"totalWithInterest":180000.0,"totalPaid":57000.0,"balance":123000.0,"status":"Active"},{"id":178,"customer":"Sudhakaran","invoice":"CRD0179","invoiceDate":"2026-05-07","dueDate":"2026-07-07","interest":1000.0,"daysRemaining":50,"paidDays":10,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":1000.0,"balance":5000.0,"status":"Active"},{"id":179,"customer":"Piyal","invoice":"CRD0180","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":20000.0,"daysRemaining":60,"paidDays":0,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":0.0,"balance":120000.0,"status":"Active"},{"id":180,"customer":"Mohan","invoice":"CRD0181","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":10000.0,"daysRemaining":39,"paidDays":21,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":21000.0,"balance":39000.0,"status":"Active"},{"id":181,"customer":"Saliya","invoice":"CRD0182","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":20000.0,"daysRemaining":57,"paidDays":3,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":6000.0,"balance":114000.0,"status":"Active"},{"id":182,"customer":"Falcon Bus Sanju","invoice":"CRD0183","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":10000.0,"daysRemaining":56,"paidDays":4,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":4000.0,"balance":56000.0,"status":"Active"},{"id":183,"customer":"Nirmala","invoice":"CRD0184","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":2000.0,"daysRemaining":53,"paidDays":7,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":1400.0,"balance":10600.0,"status":"Active"},{"id":184,"customer":"Aayachana Chaminda","invoice":"CRD0185","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":6000.0,"daysRemaining":54,"paidDays":6,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":3600.0,"balance":32400.0,"status":"Active"},{"id":185,"customer":"Manju","invoice":"CRD0186","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":7000.0,"daysRemaining":54,"paidDays":6,"principal":35000.0,"totalWithInterest":42000.0,"totalPaid":4200.0,"balance":37800.0,"status":"Active"},{"id":186,"customer":"Malabe Nalaka","invoice":"CRD0187","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":6000.0,"daysRemaining":60,"paidDays":0,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":0.0,"balance":36000.0,"status":"Active"},{"id":187,"customer":"Janaka Shed","invoice":"CRD0188","invoiceDate":"2026-05-15","dueDate":"2026-07-15","interest":5000.0,"daysRemaining":47,"paidDays":13,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":6500.0,"balance":23500.0,"status":"Active"},{"id":188,"customer":"Pinthaliya pol Kade","invoice":"CRD0189","invoiceDate":"2026-05-22","dueDate":"2026-07-22","interest":20000.0,"daysRemaining":54,"paidDays":6,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":12000.0,"balance":108000.0,"status":"Active"},{"id":189,"customer":"Kalpa Malabe","invoice":"CRD0190","invoiceDate":"2026-05-23","dueDate":"2026-07-23","interest":10000.0,"daysRemaining":60,"paidDays":0,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":0.0,"balance":60000.0,"status":"Active"},{"id":190,"customer":"Bindu Mas Kade","invoice":"CRD0191","invoiceDate":"2026-05-26","dueDate":"2026-07-26","interest":20000.0,"daysRemaining":60,"paidDays":0,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":0.0,"balance":120000.0,"status":"Active"},{"id":191,"customer":"Lalitha Aunty","invoice":"CRD0192","invoiceDate":"2026-05-26","dueDate":"2026-07-26","interest":4000.0,"daysRemaining":60,"paidDays":0,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":0.0,"balance":24000.0,"status":"Active"},{"id":192,"customer":"Malith Post Office","invoice":"CRD0193","invoiceDate":"2026-06-03","dueDate":"2026-08-03","interest":20000.0,"daysRemaining":60,"paidDays":0,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":0.0,"balance":120000.0,"status":"Active"},{"id":193,"customer":"Pathum Malli Malabe","invoice":"CRD0194","invoiceDate":"2026-06-03","dueDate":"2026-08-03","interest":3000.0,"daysRemaining":60,"paidDays":0,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":0.0,"balance":18000.0,"status":"Active"}]
-;
+const ROLES={Sadini:'Finance Manager',Oshan:'Collector',Collector3:'Collector',Collector4:'Collector',Collector5:'Collector'};
+const SEED=[{"id":1,"customer":"Isanka","invoice":"CRD0002","invoiceDate":"2025-05-23","dueDate":"2025-07-23","interest":3000.0,"daysRemaining":-340,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed","daysPastDue":340},{"id":2,"customer":"Kumari","invoice":"CRD0003","invoiceDate":"2025-06-05","dueDate":"2025-08-05","interest":2000.0,"daysRemaining":-327,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":327},{"id":3,"customer":"Rosi","invoice":"CRD0004","invoiceDate":"2025-06-08","dueDate":"2025-08-08","interest":5000.0,"daysRemaining":-324,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed","daysPastDue":324},{"id":4,"customer":"Dimuthu","invoice":"CRD0005","invoiceDate":"2025-06-16","dueDate":"2025-08-16","interest":4000.0,"daysRemaining":-316,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":316},{"id":5,"customer":"Jayantha 3weel","invoice":"CRD0006","invoiceDate":"2025-06-20","dueDate":"2025-08-20","interest":5000.0,"daysRemaining":-312,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed","daysPastDue":312},{"id":6,"customer":"Thilini","invoice":"CRD0007","invoiceDate":"2025-06-21","dueDate":"2025-08-21","interest":2000.0,"daysRemaining":-311,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":311},{"id":7,"customer":"Pradeep","invoice":"CRD0008","invoiceDate":"2025-06-22","dueDate":"2025-08-22","interest":1000.0,"daysRemaining":-310,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed","daysPastDue":310},{"id":8,"customer":"Sudda Mama","invoice":"CRD0009","invoiceDate":"2025-07-13","dueDate":"2025-09-12","interest":4000.0,"daysRemaining":-289,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":289},{"id":9,"customer":"Sudu Mama","invoice":"CRD0010","invoiceDate":"2025-07-16","dueDate":"2025-09-15","interest":2000.0,"daysRemaining":-286,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":286},{"id":10,"customer":"Isanka","invoice":"CRD0011","invoiceDate":"2025-07-27","dueDate":"2025-09-26","interest":5000.0,"daysRemaining":-275,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed","daysPastDue":275},{"id":11,"customer":"Gayani","invoice":"CRD0012","invoiceDate":"2025-07-30","dueDate":"2025-09-29","interest":10000.0,"daysRemaining":-272,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":272},{"id":12,"customer":"Gayani","invoice":"CRD0013","invoiceDate":"2025-08-01","dueDate":"2025-10-01","interest":3000.0,"daysRemaining":-270,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed","daysPastDue":270},{"id":13,"customer":"Piyal","invoice":"CRD0014","invoiceDate":"2025-08-01","dueDate":"2025-10-01","interest":4000.0,"daysRemaining":-270,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":270},{"id":14,"customer":"Kumari","invoice":"CRD0015","invoiceDate":"2025-08-03","dueDate":"2025-10-03","interest":2000.0,"daysRemaining":-268,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":268},{"id":15,"customer":"Rosi","invoice":"CRD0016","invoiceDate":"2025-08-03","dueDate":"2025-10-03","interest":5000.0,"daysRemaining":-268,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed","daysPastDue":268},{"id":16,"customer":"Rasika","invoice":"CRD0017","invoiceDate":"2025-08-04","dueDate":"2025-10-04","interest":5000.0,"daysRemaining":-267,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed","daysPastDue":267},{"id":17,"customer":"Samadi","invoice":"CRD0018","invoiceDate":"2025-08-13","dueDate":"2025-10-13","interest":1000.0,"daysRemaining":-258,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed","daysPastDue":258},{"id":18,"customer":"Shalani","invoice":"CRD0019","invoiceDate":"2025-08-14","dueDate":"2025-10-14","interest":2000.0,"daysRemaining":-257,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":257},{"id":19,"customer":"Ranga","invoice":"CRD0020","invoiceDate":"2025-08-15","dueDate":"2025-10-15","interest":6000.0,"daysRemaining":-256,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":256},{"id":20,"customer":"Madushi","invoice":"CRD0021","invoiceDate":"2025-08-17","dueDate":"2025-10-17","interest":6000.0,"daysRemaining":-254,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":254},{"id":21,"customer":"Nimesha","invoice":"CRD0022","invoiceDate":"2025-08-17","dueDate":"2025-10-17","interest":6000.0,"daysRemaining":-254,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":254},{"id":22,"customer":"Pradeep","invoice":"CRD0023","invoiceDate":"2025-08-20","dueDate":"2025-10-20","interest":2000.0,"daysRemaining":-251,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":251},{"id":23,"customer":"Thilini","invoice":"CRD0024","invoiceDate":"2025-08-20","dueDate":"2025-10-20","interest":4000.0,"daysRemaining":-251,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":251},{"id":24,"customer":"Dimuthu","invoice":"CRD0025","invoiceDate":"2025-08-25","dueDate":"2025-10-25","interest":4000.0,"daysRemaining":-246,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":246},{"id":25,"customer":"Prasanna","invoice":"CRD0026","invoiceDate":"2025-08-25","dueDate":"2025-10-25","interest":6000.0,"daysRemaining":-246,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":246},{"id":26,"customer":"Helan Saloon","invoice":"CRD0027","invoiceDate":"2025-08-25","dueDate":"2025-10-25","interest":10000.0,"daysRemaining":-246,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":246},{"id":27,"customer":"Ayesha","invoice":"CRD0028","invoiceDate":"2025-09-08","dueDate":"2025-11-08","interest":4000.0,"daysRemaining":-232,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":232},{"id":28,"customer":"Niluka","invoice":"CRD0029","invoiceDate":"2025-09-10","dueDate":"2025-11-10","interest":2000.0,"daysRemaining":-230,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":230},{"id":29,"customer":"Sudu Mama","invoice":"CRD0030","invoiceDate":"2025-09-12","dueDate":"2025-11-12","interest":2000.0,"daysRemaining":-228,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":228},{"id":30,"customer":"Piyal","invoice":"CRD0031","invoiceDate":"2025-09-26","dueDate":"2025-11-26","interest":5000.0,"daysRemaining":-214,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed","daysPastDue":214},{"id":31,"customer":"Isanka","invoice":"CRD0032","invoiceDate":"2025-09-30","dueDate":"2025-11-30","interest":10000.0,"daysRemaining":-210,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":210},{"id":32,"customer":"Samadi","invoice":"CRD0033","invoiceDate":"2025-09-30","dueDate":"2025-11-30","interest":1000.0,"daysRemaining":-210,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed","daysPastDue":210},{"id":33,"customer":"Shalani","invoice":"CRD0034","invoiceDate":"2025-09-30","dueDate":"2025-11-30","interest":10000.0,"daysRemaining":-210,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":210},{"id":34,"customer":"Thilini","invoice":"CRD0035","invoiceDate":"2025-10-02","dueDate":"2025-12-02","interest":4000.0,"daysRemaining":-208,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":208},{"id":35,"customer":"Gayani","invoice":"CRD0036","invoiceDate":"2025-10-05","dueDate":"2025-12-05","interest":10000.0,"daysRemaining":-205,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":205},{"id":36,"customer":"Rosi","invoice":"CRD0037","invoiceDate":"2025-10-10","dueDate":"2025-12-10","interest":10000.0,"daysRemaining":-200,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":200},{"id":37,"customer":"Sadamali","invoice":"CRD0038","invoiceDate":"2025-10-10","dueDate":"2025-12-10","interest":10000.0,"daysRemaining":-200,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":200},{"id":38,"customer":"Helan Saloon","invoice":"CRD0039","invoiceDate":"2025-10-14","dueDate":"2025-12-14","interest":20000.0,"daysRemaining":-196,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed","daysPastDue":196},{"id":39,"customer":"Ayesha","invoice":"CRD0040","invoiceDate":"2025-10-17","dueDate":"2025-12-17","interest":4000.0,"daysRemaining":-193,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":193},{"id":40,"customer":"Akma","invoice":"CRD0041","invoiceDate":"2025-10-18","dueDate":"2025-12-18","interest":2000.0,"daysRemaining":-192,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":192},{"id":41,"customer":"Gali Suranga","invoice":"CRD0042","invoiceDate":"2025-10-18","dueDate":"2025-12-18","interest":1000.0,"daysRemaining":-192,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed","daysPastDue":192},{"id":42,"customer":"Bus Ranga","invoice":"CRD0043","invoiceDate":"2025-10-19","dueDate":"2025-12-19","interest":4000.0,"daysRemaining":-191,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":191},{"id":43,"customer":"Nimal","invoice":"CRD0044","invoiceDate":"2025-10-19","dueDate":"2025-12-19","interest":2000.0,"daysRemaining":-191,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":191},{"id":44,"customer":"Saranga","invoice":"CRD0045","invoiceDate":"2025-10-21","dueDate":"2025-12-21","interest":2000.0,"daysRemaining":-189,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":189},{"id":45,"customer":"Chaminda","invoice":"CRD0046","invoiceDate":"2025-10-21","dueDate":"2025-12-21","interest":3000.0,"daysRemaining":-189,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed","daysPastDue":189},{"id":46,"customer":"Shantha","invoice":"CRD0047","invoiceDate":"2025-10-21","dueDate":"2025-12-21","interest":4000.0,"daysRemaining":-189,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":189},{"id":47,"customer":"Ganga","invoice":"CRD0048","invoiceDate":"2025-10-22","dueDate":"2025-12-22","interest":2000.0,"daysRemaining":-188,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":188},{"id":48,"customer":"Pradeep","invoice":"CRD0049","invoiceDate":"2025-10-22","dueDate":"2025-12-22","interest":1000.0,"daysRemaining":-188,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed","daysPastDue":188},{"id":49,"customer":"Udeni","invoice":"CRD0050","invoiceDate":"2025-10-22","dueDate":"2025-12-22","interest":2000.0,"daysRemaining":-188,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":188},{"id":50,"customer":"Bindu Kade","invoice":"CRD0051","invoiceDate":"2025-10-23","dueDate":"2025-12-23","interest":10000.0,"daysRemaining":-187,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":187},{"id":51,"customer":"Kade Ranga","invoice":"CRD0052","invoiceDate":"2025-10-23","dueDate":"2025-12-23","interest":2000.0,"daysRemaining":-187,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":187},{"id":52,"customer":"Bus Chaminda","invoice":"CRD0053","invoiceDate":"2025-10-27","dueDate":"2025-12-27","interest":2000.0,"daysRemaining":-183,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":183},{"id":53,"customer":"Chamara","invoice":"CRD0054","invoiceDate":"2025-10-27","dueDate":"2025-12-27","interest":4000.0,"daysRemaining":-183,"paidDays":54,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":21600.0,"balance":2400.0,"status":"Active","daysPastDue":183},{"id":54,"customer":"Jaanaka","invoice":"CRD0055","invoiceDate":"2025-10-27","dueDate":"2025-12-27","interest":5000.0,"daysRemaining":-183,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed","daysPastDue":183},{"id":55,"customer":"Saasthara Gedara","invoice":"CRD0056","invoiceDate":"2025-10-27","dueDate":"2025-12-27","interest":4000.0,"daysRemaining":-183,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":183},{"id":56,"customer":"Manoj","invoice":"CRD0057","invoiceDate":"2025-10-30","dueDate":"2025-12-30","interest":10000.0,"daysRemaining":-180,"paidDays":40,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":180},{"id":57,"customer":"Prasanna","invoice":"CRD0058","invoiceDate":"2025-10-30","dueDate":"2025-12-30","interest":4000.0,"daysRemaining":-180,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":180},{"id":58,"customer":"Gayan","invoice":"CRD0059","invoiceDate":"2025-11-01","dueDate":"2026-01-01","interest":4000.0,"daysRemaining":-178,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":178},{"id":59,"customer":"A.P Malu Kade","invoice":"CRD0060","invoiceDate":"2025-11-03","dueDate":"2026-01-03","interest":20000.0,"daysRemaining":-176,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed","daysPastDue":176},{"id":60,"customer":"Ranji Mama","invoice":"CRD0061","invoiceDate":"2025-11-03","dueDate":"2026-01-03","interest":4000.0,"daysRemaining":-176,"paidDays":49,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":19600.0,"balance":4400.0,"status":"Active","daysPastDue":176},{"id":61,"customer":"Shehan","invoice":"CRD0062","invoiceDate":"2025-11-06","dueDate":"2026-01-06","interest":20000.0,"daysRemaining":-173,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed","daysPastDue":173},{"id":62,"customer":"Nilanga","invoice":"CRD0063","invoiceDate":"2025-11-06","dueDate":"2026-01-06","interest":10000.0,"daysRemaining":-173,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":173},{"id":63,"customer":"Shalani","invoice":"CRD0064","invoiceDate":"2025-11-08","dueDate":"2026-01-08","interest":12000.0,"daysRemaining":-171,"paidDays":60,"principal":60000.0,"totalWithInterest":72000.0,"totalPaid":72000.0,"balance":0.0,"status":"Closed","daysPastDue":171},{"id":64,"customer":"Samadi","invoice":"CRD0065","invoiceDate":"2025-11-08","dueDate":"2026-01-08","interest":2000.0,"daysRemaining":-171,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":171},{"id":65,"customer":"Pathum","invoice":"CRD0066","invoiceDate":"2025-11-08","dueDate":"2026-01-08","interest":30000.0,"daysRemaining":-171,"paidDays":60,"principal":150000.0,"totalWithInterest":180000.0,"totalPaid":180000.0,"balance":0.0,"status":"Closed","daysPastDue":171},{"id":66,"customer":"Angoda Elawalu Kade","invoice":"CRD0067","invoiceDate":"2025-11-10","dueDate":"2026-01-10","interest":40000.0,"daysRemaining":-169,"paidDays":60,"principal":200000.0,"totalWithInterest":240000.0,"totalPaid":240000.0,"balance":0.0,"status":"Closed","daysPastDue":169},{"id":67,"customer":"Ganga","invoice":"CRD0068","invoiceDate":"2025-11-15","dueDate":"2026-01-15","interest":6000.0,"daysRemaining":-164,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":164},{"id":68,"customer":"Mas Kade Raja","invoice":"CRD0069","invoiceDate":"2025-11-15","dueDate":"2026-01-15","interest":6000.0,"daysRemaining":-164,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":164},{"id":69,"customer":"Kasun Angoda","invoice":"CRD0070","invoiceDate":"2025-11-15","dueDate":"2026-01-15","interest":4000.0,"daysRemaining":-164,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":164},{"id":70,"customer":"Tharidu","invoice":"CRD0071","invoiceDate":"2025-11-18","dueDate":"2026-01-18","interest":4000.0,"daysRemaining":-161,"paidDays":43,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":17200.0,"balance":6800.0,"status":"Active","daysPastDue":161},{"id":71,"customer":"Jana","invoice":"CRD0072","invoiceDate":"2025-11-19","dueDate":"2026-01-19","interest":3000.0,"daysRemaining":-160,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed","daysPastDue":160},{"id":72,"customer":"Thamali","invoice":"CRD0073","invoiceDate":"2025-11-20","dueDate":"2026-01-20","interest":2000.0,"daysRemaining":-159,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":159},{"id":73,"customer":"Chita Aiya","invoice":"CRD0074","invoiceDate":"2025-11-22","dueDate":"2026-01-22","interest":2000.0,"daysRemaining":-157,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":157},{"id":74,"customer":"Madu Nanda","invoice":"CRD0075","invoiceDate":"2025-11-22","dueDate":"2026-01-22","interest":1000.0,"daysRemaining":-157,"paidDays":60,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed","daysPastDue":157},{"id":75,"customer":"Piyal","invoice":"CRD0076","invoiceDate":"2025-11-23","dueDate":"2026-01-23","interest":20000.0,"daysRemaining":-156,"paidDays":59,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":118000.0,"balance":2000.0,"status":"Active","daysPastDue":156},{"id":76,"customer":"Akma","invoice":"CRD0077","invoiceDate":"2025-11-23","dueDate":"2026-01-23","interest":2000.0,"daysRemaining":-156,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":156},{"id":77,"customer":"Shani Nangi","invoice":"CRD0078","invoiceDate":"2025-11-25","dueDate":"2026-01-25","interest":8000.0,"daysRemaining":-154,"paidDays":60,"principal":40000.0,"totalWithInterest":48000.0,"totalPaid":48000.0,"balance":0.0,"status":"Closed","daysPastDue":154},{"id":78,"customer":"Helan Saloon","invoice":"CRD0079","invoiceDate":"2025-11-25","dueDate":"2026-01-25","interest":6333.33,"daysRemaining":-154,"paidDays":19,"principal":31666.67,"totalWithInterest":38000.0,"totalPaid":38000.0,"balance":0.0,"status":"Closed","daysPastDue":154},{"id":79,"customer":"Gali Suranga","invoice":"CRD0080","invoiceDate":"2025-11-25","dueDate":"2026-01-25","interest":4000.0,"daysRemaining":-154,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":154},{"id":80,"customer":"Sameera","invoice":"CRD0081","invoiceDate":"2025-11-26","dueDate":"2026-01-26","interest":6000.0,"daysRemaining":-153,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":153},{"id":81,"customer":"Walanda Hotel","invoice":"CRD0082","invoiceDate":"2025-11-26","dueDate":"2026-01-26","interest":10000.0,"daysRemaining":-153,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":153},{"id":82,"customer":"Madushi","invoice":"CRD0083","invoiceDate":"2025-11-27","dueDate":"2026-01-27","interest":10000.0,"daysRemaining":-152,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":152},{"id":83,"customer":"Jayasekara","invoice":"CRD0084","invoiceDate":"2025-11-27","dueDate":"2026-01-27","interest":6000.0,"daysRemaining":-152,"paidDays":59,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":35400.0,"balance":600.0,"status":"Active","daysPastDue":152},{"id":84,"customer":"Shantha Mama","invoice":"CRD0085","invoiceDate":"2025-11-29","dueDate":"2026-01-29","interest":6000.0,"daysRemaining":-150,"paidDays":59,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":35400.0,"balance":600.0,"status":"Active","daysPastDue":150},{"id":85,"customer":"Gayani","invoice":"CRD0086","invoiceDate":"2025-12-08","dueDate":"2026-02-07","interest":10000.0,"daysRemaining":-141,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":141},{"id":86,"customer":"Udeni","invoice":"CRD0087","invoiceDate":"2025-12-08","dueDate":"2026-02-07","interest":3000.0,"daysRemaining":-141,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed","daysPastDue":141},{"id":87,"customer":"Rosi Akka","invoice":"CRD0088","invoiceDate":"2025-12-08","dueDate":"2026-02-07","interest":10000.0,"daysRemaining":-141,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":141},{"id":88,"customer":"Pradeep","invoice":"CRD0089","invoiceDate":"2025-12-11","dueDate":"2026-02-10","interest":2000.0,"daysRemaining":-138,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":138},{"id":89,"customer":"Thilini","invoice":"CRD0090","invoiceDate":"2025-12-14","dueDate":"2026-02-13","interest":6000.0,"daysRemaining":-135,"paidDays":32,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":19200.0,"balance":16800.0,"status":"Active","daysPastDue":135},{"id":90,"customer":"Nirmala","invoice":"CRD0091","invoiceDate":"2025-12-14","dueDate":"2026-02-13","interest":2000.0,"daysRemaining":-135,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":135},{"id":91,"customer":"Aloka Light Kade","invoice":"CRD0092","invoiceDate":"2025-12-20","dueDate":"2026-02-19","interest":10000.0,"daysRemaining":-129,"paidDays":30,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":30000.0,"balance":30000.0,"status":"Active","daysPastDue":129},{"id":92,"customer":"Kumara Wade Kade","invoice":"CRD0093","invoiceDate":"2025-12-21","dueDate":"2026-02-20","interest":20000.0,"daysRemaining":-128,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed","daysPastDue":128},{"id":93,"customer":"Pathum Golaya","invoice":"CRD0094","invoiceDate":"2025-12-21","dueDate":"2026-02-20","interest":5000.0,"daysRemaining":-128,"paidDays":9,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":4500.0,"balance":25500.0,"status":"Active","daysPastDue":128},{"id":94,"customer":"Shalini","invoice":"CRD0095","invoiceDate":"2025-12-22","dueDate":"2026-02-21","interest":40000.0,"daysRemaining":-127,"paidDays":35,"principal":200000.0,"totalWithInterest":240000.0,"totalPaid":140000.0,"balance":100000.0,"status":"Active","daysPastDue":127},{"id":95,"customer":"Nethmi","invoice":"CRD0096","invoiceDate":"2025-12-22","dueDate":"2026-02-21","interest":8000.0,"daysRemaining":-127,"paidDays":60,"principal":40000.0,"totalWithInterest":48000.0,"totalPaid":48000.0,"balance":0.0,"status":"Closed","daysPastDue":127},{"id":96,"customer":"Nilushi","invoice":"CRD0097","invoiceDate":"2025-12-22","dueDate":"2026-02-21","interest":4000.0,"daysRemaining":-127,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":127},{"id":97,"customer":"Thushari Malabe Redi Kade","invoice":"CRD0098","invoiceDate":"2025-12-24","dueDate":"2026-02-23","interest":6000.0,"daysRemaining":-125,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":125},{"id":98,"customer":"Ayesha","invoice":"CRD0099","invoiceDate":"2025-12-27","dueDate":"2026-02-26","interest":6000.0,"daysRemaining":-122,"paidDays":27,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":16200.0,"balance":19800.0,"status":"Active","daysPastDue":122},{"id":99,"customer":"Punsika Kumara","invoice":"CRD0100","invoiceDate":"2025-12-27","dueDate":"2026-02-26","interest":10000.0,"daysRemaining":-122,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":122},{"id":100,"customer":"Suji Akka","invoice":"CRD0101","invoiceDate":"2025-12-27","dueDate":"2026-02-26","interest":4000.0,"daysRemaining":-122,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":122},{"id":101,"customer":"Gayani Manju","invoice":"CRD0102","invoiceDate":"2025-12-31","dueDate":"2026-03-02","interest":5000.0,"daysRemaining":-118,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed","daysPastDue":118},{"id":102,"customer":"Amantha Tatoo","invoice":"CRD0103","invoiceDate":"2025-12-31","dueDate":"2026-03-02","interest":6000.0,"daysRemaining":-118,"paidDays":41,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":24600.0,"balance":11400.0,"status":"Active","daysPastDue":118},{"id":103,"customer":"Malabe Shoe Shop","invoice":"CRD0104","invoiceDate":"2026-01-04","dueDate":"2026-03-06","interest":6000.0,"daysRemaining":-114,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":114},{"id":104,"customer":"Pathum","invoice":"CRD0105","invoiceDate":"2026-01-05","dueDate":"2026-03-07","interest":30000.0,"daysRemaining":-113,"paidDays":56,"principal":150000.0,"totalWithInterest":180000.0,"totalPaid":168000.0,"balance":12000.0,"status":"Active","daysPastDue":113},{"id":105,"customer":"Sanjana Kumari","invoice":"CRD0106","invoiceDate":"2026-01-07","dueDate":"2026-03-09","interest":20000.0,"daysRemaining":-111,"paidDays":55,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":110000.0,"balance":10000.0,"status":"Active","daysPastDue":111},{"id":106,"customer":"Raja Mas Kade","invoice":"CRD0107","invoiceDate":"2026-01-07","dueDate":"2026-03-09","interest":10000.0,"daysRemaining":-111,"paidDays":2,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":2000.0,"balance":58000.0,"status":"Active","daysPastDue":111},{"id":107,"customer":"Tharika","invoice":"CRD0108","invoiceDate":"2026-01-07","dueDate":"2026-03-09","interest":2000.0,"daysRemaining":-111,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":111},{"id":108,"customer":"Walada Kade Golaya","invoice":"CRD0109","invoiceDate":"2026-01-10","dueDate":"2026-03-12","interest":10000.0,"daysRemaining":-108,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":108},{"id":109,"customer":"Manoj","invoice":"CRD0110","invoiceDate":"2026-01-10","dueDate":"2026-03-12","interest":1000.0,"daysRemaining":-108,"paidDays":10,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":6000.0,"balance":0.0,"status":"Closed","daysPastDue":108},{"id":110,"customer":"Koria Sameera","invoice":"CRD0111","invoiceDate":"2026-01-11","dueDate":"2026-03-13","interest":10000.0,"daysRemaining":-107,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":107},{"id":111,"customer":"Sadamali","invoice":"CRD0112","invoiceDate":"2026-01-15","dueDate":"2026-03-17","interest":10000.0,"daysRemaining":-103,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":103},{"id":112,"customer":"Punsika Kumara","invoice":"CRD0113","invoiceDate":"2026-01-16","dueDate":"2026-03-18","interest":20000.0,"daysRemaining":-102,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed","daysPastDue":102},{"id":113,"customer":"Malabe Pola Kumari","invoice":"CRD0114","invoiceDate":"2026-01-18","dueDate":"2026-03-20","interest":4000.0,"daysRemaining":-100,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":100},{"id":114,"customer":"Nilushi","invoice":"CRD0115","invoiceDate":"2026-01-18","dueDate":"2026-03-20","interest":10000.0,"daysRemaining":-100,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":100},{"id":115,"customer":"Samadi","invoice":"CRD0116","invoiceDate":"2026-01-20","dueDate":"2026-03-22","interest":3000.0,"daysRemaining":-98,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed","daysPastDue":98},{"id":116,"customer":"Isanka","invoice":"CRD0117","invoiceDate":"2026-01-26","dueDate":"2026-03-28","interest":5000.0,"daysRemaining":-92,"paidDays":60,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":30000.0,"balance":0.0,"status":"Closed","daysPastDue":92},{"id":117,"customer":"Ganga","invoice":"CRD0118","invoiceDate":"2026-01-26","dueDate":"2026-03-28","interest":10000.0,"daysRemaining":-92,"paidDays":54,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":54000.0,"balance":6000.0,"status":"Active","daysPastDue":92},{"id":118,"customer":"Malith Post Office","invoice":"CRD0119","invoiceDate":"2026-01-26","dueDate":"2026-03-28","interest":10000.0,"daysRemaining":-92,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":92},{"id":119,"customer":"Saranga","invoice":"CRD0120","invoiceDate":"2026-01-26","dueDate":"2026-03-28","interest":10000.0,"daysRemaining":-92,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":92},{"id":120,"customer":"Chaminda","invoice":"CRD0121","invoiceDate":"2026-01-29","dueDate":"2026-03-31","interest":10000.0,"daysRemaining":-89,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":89},{"id":121,"customer":"Nimal","invoice":"CRD0122","invoiceDate":"2026-01-29","dueDate":"2026-03-31","interest":6000.0,"daysRemaining":-89,"paidDays":21,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":12600.0,"balance":23400.0,"status":"Active","daysPastDue":89},{"id":122,"customer":"Kasun","invoice":"CRD0123","invoiceDate":"2026-01-29","dueDate":"2026-03-31","interest":4000.0,"daysRemaining":-89,"paidDays":23,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":9200.0,"balance":14800.0,"status":"Active","daysPastDue":89},{"id":123,"customer":"Dulaj (Nimesh)","invoice":"CRD0124","invoiceDate":"2026-02-02","dueDate":"2026-04-04","interest":2000.0,"daysRemaining":-85,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":85},{"id":124,"customer":"Murukkuwa","invoice":"CRD0125","invoiceDate":"2026-02-03","dueDate":"2026-04-05","interest":4000.0,"daysRemaining":-84,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":84},{"id":125,"customer":"Akma","invoice":"CRD0126","invoiceDate":"2026-02-03","dueDate":"2026-04-05","interest":2000.0,"daysRemaining":-84,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":84},{"id":126,"customer":"Malabe Pola Kumari","invoice":"CRD0127","invoiceDate":"2026-02-03","dueDate":"2026-04-05","interest":10000.0,"daysRemaining":-84,"paidDays":45,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":45000.0,"balance":15000.0,"status":"Active","daysPastDue":84},{"id":127,"customer":"Rosi Akka","invoice":"CRD0128","invoiceDate":"2026-02-03","dueDate":"2026-04-05","interest":12000.0,"daysRemaining":-84,"paidDays":31,"principal":60000.0,"totalWithInterest":72000.0,"totalPaid":37200.0,"balance":34800.0,"status":"Active","daysPastDue":84},{"id":128,"customer":"Gamini","invoice":"CRD0129","invoiceDate":"2026-02-09","dueDate":"2026-04-11","interest":6000.0,"daysRemaining":-78,"paidDays":48,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":28800.0,"balance":7200.0,"status":"Active","daysPastDue":78},{"id":129,"customer":"Gayani","invoice":"CRD0130","invoiceDate":"2026-02-10","dueDate":"2026-04-12","interest":20000.0,"daysRemaining":-77,"paidDays":27,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":54000.0,"balance":66000.0,"status":"Active","daysPastDue":77},{"id":130,"customer":"Sameera 2","invoice":"CRD0131","invoiceDate":"2026-02-11","dueDate":"2026-04-13","interest":10000.0,"daysRemaining":-76,"paidDays":5,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":5000.0,"balance":55000.0,"status":"Active","daysPastDue":76},{"id":131,"customer":"Saliya","invoice":"CRD0132","invoiceDate":"2026-02-11","dueDate":"2026-04-13","interest":6000.0,"daysRemaining":-76,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":76},{"id":132,"customer":"Sudu Malli","invoice":"CRD0133","invoiceDate":"2026-02-12","dueDate":"2026-04-14","interest":4000.0,"daysRemaining":-75,"paidDays":58,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":23200.0,"balance":800.0,"status":"Active","daysPastDue":75},{"id":133,"customer":"Malabe Pathum Malli","invoice":"CRD0134","invoiceDate":"2026-02-12","dueDate":"2026-04-14","interest":2000.0,"daysRemaining":-75,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":75},{"id":134,"customer":"Nirmala","invoice":"CRD0135","invoiceDate":"2026-02-14","dueDate":"2026-04-16","interest":3000.0,"daysRemaining":-73,"paidDays":60,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":18000.0,"balance":0.0,"status":"Closed","daysPastDue":73},{"id":135,"customer":"NC Driver","invoice":"CRD0136","invoiceDate":"2026-02-14","dueDate":"2026-04-16","interest":5000.0,"daysRemaining":-73,"paidDays":26,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":13000.0,"balance":17000.0,"status":"Active","daysPastDue":73},{"id":136,"customer":"Sihina Patikki Bus","invoice":"CRD0137","invoiceDate":"2026-02-26","dueDate":"2026-04-28","interest":20000.0,"daysRemaining":-61,"paidDays":9,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":18000.0,"balance":102000.0,"status":"Active","daysPastDue":61},{"id":137,"customer":"Thilina Malli","invoice":"CRD0138","invoiceDate":"2026-02-26","dueDate":"2026-04-28","interest":6000.0,"daysRemaining":-61,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":61},{"id":138,"customer":"Tharika","invoice":"CRD0139","invoiceDate":"2026-02-20","dueDate":"2026-04-22","interest":10000.0,"daysRemaining":-67,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":67},{"id":139,"customer":"Priyanga","invoice":"CRD0140","invoiceDate":"2026-02-20","dueDate":"2026-04-22","interest":10000.0,"daysRemaining":-67,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":67},{"id":140,"customer":"Kumara Wade Kade","invoice":"CRD0141","invoiceDate":"2026-02-20","dueDate":"2026-04-22","interest":30000.0,"daysRemaining":-67,"paidDays":37,"principal":150000.0,"totalWithInterest":180000.0,"totalPaid":111000.0,"balance":69000.0,"status":"Active","daysPastDue":67},{"id":141,"customer":"Helan Saloon","invoice":"CRD0142","invoiceDate":"2026-02-19","dueDate":"2026-04-21","interest":20000.0,"daysRemaining":-68,"paidDays":17,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":34000.0,"balance":86000.0,"status":"Active","daysPastDue":68},{"id":142,"customer":"Gali Suranga","invoice":"CRD0143","invoiceDate":"2026-02-19","dueDate":"2026-04-21","interest":8000.0,"daysRemaining":-68,"paidDays":60,"principal":40000.0,"totalWithInterest":48000.0,"totalPaid":48000.0,"balance":0.0,"status":"Closed","daysPastDue":68},{"id":143,"customer":"Manoj","invoice":"CRD0144","invoiceDate":"2026-03-01","dueDate":"2026-05-01","interest":6000.0,"daysRemaining":-58,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":58},{"id":144,"customer":"Saliya","invoice":"CRD0145","invoiceDate":"2026-03-06","dueDate":"2026-05-06","interest":20000.0,"daysRemaining":-53,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed","daysPastDue":53},{"id":145,"customer":"Nande Time Keeper","invoice":"CRD0146","invoiceDate":"2026-02-24","dueDate":"2026-04-26","interest":5000.0,"daysRemaining":-63,"paidDays":10,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":5000.0,"balance":25000.0,"status":"Active","daysPastDue":63},{"id":146,"customer":"Dhanushka","invoice":"CRD0147","invoiceDate":"2026-02-26","dueDate":"2026-04-28","interest":5000.0,"daysRemaining":-61,"paidDays":20,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":10000.0,"balance":20000.0,"status":"Active","daysPastDue":61},{"id":147,"customer":"Kalpa","invoice":"CRD0148","invoiceDate":"2026-02-26","dueDate":"2026-04-28","interest":2000.0,"daysRemaining":-61,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":61},{"id":148,"customer":"Dulaj (Nimesh)","invoice":"CRD0149","invoiceDate":"2026-02-15","dueDate":"2026-04-17","interest":4000.0,"daysRemaining":-72,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":72},{"id":149,"customer":"Malith Post Office","invoice":"CRD0150","invoiceDate":"2026-03-09","dueDate":"2026-05-09","interest":20000.0,"daysRemaining":-50,"paidDays":60,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":120000.0,"balance":0.0,"status":"Closed","daysPastDue":50},{"id":150,"customer":"Pradeep (Sameera Aiya)","invoice":"CRD0151","invoiceDate":"2026-03-09","dueDate":"2026-05-09","interest":4000.0,"daysRemaining":-50,"paidDays":8,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":3200.0,"balance":20800.0,"status":"Active","daysPastDue":50},{"id":151,"customer":"Madusanka","invoice":"CRD0152","invoiceDate":"2026-03-09","dueDate":"2026-05-09","interest":10000.0,"daysRemaining":-50,"paidDays":6,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":6000.0,"balance":54000.0,"status":"Active","daysPastDue":50},{"id":152,"customer":"Malabe Bus Sanjeewa","invoice":"CRD0153","invoiceDate":"2026-03-12","dueDate":"2026-05-12","interest":4000.0,"daysRemaining":-47,"paidDays":41,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":16400.0,"balance":7600.0,"status":"Active","daysPastDue":47},{"id":153,"customer":"Samadi","invoice":"CRD0154","invoiceDate":"2026-03-14","dueDate":"2026-05-14","interest":5000.0,"daysRemaining":-45,"paidDays":42,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":21000.0,"balance":9000.0,"status":"Active","daysPastDue":45},{"id":154,"customer":"Malabe John","invoice":"CRD0155","invoiceDate":"2026-03-15","dueDate":"2026-05-15","interest":15000.0,"daysRemaining":-44,"paidDays":29,"principal":75000.0,"totalWithInterest":90000.0,"totalPaid":43500.0,"balance":46500.0,"status":"Active","daysPastDue":44},{"id":155,"customer":"Kalpa Malabe","invoice":"CRD0156","invoiceDate":"2026-03-15","dueDate":"2026-05-15","interest":6000.0,"daysRemaining":-44,"paidDays":59,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":35400.0,"balance":600.0,"status":"Active","daysPastDue":44},{"id":156,"customer":"Madushi","invoice":"CRD0157","invoiceDate":"2026-03-15","dueDate":"2026-05-15","interest":2000.0,"daysRemaining":-44,"paidDays":50,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":10000.0,"balance":2000.0,"status":"Active","daysPastDue":44},{"id":157,"customer":"Punsika Kumara","invoice":"CRD0158","invoiceDate":"2026-03-19","dueDate":"2026-05-19","interest":20000.0,"daysRemaining":-40,"paidDays":21,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":42000.0,"balance":78000.0,"status":"Active","daysPastDue":40},{"id":158,"customer":"Babi Akka","invoice":"CRD0159","invoiceDate":"2026-03-21","dueDate":"2026-05-21","interest":3000.0,"daysRemaining":-38,"paidDays":46,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":13800.0,"balance":4200.0,"status":"Active","daysPastDue":38},{"id":159,"customer":"Bharatha","invoice":"CRD0160","invoiceDate":"2026-03-19","dueDate":"2026-05-19","interest":4000.0,"daysRemaining":-40,"paidDays":29,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":11600.0,"balance":12400.0,"status":"Active","daysPastDue":40},{"id":160,"customer":"Koria Sameera","invoice":"CRD0161","invoiceDate":"2026-03-21","dueDate":"2026-05-21","interest":10000.0,"daysRemaining":-38,"paidDays":0,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":0.0,"balance":60000.0,"status":"Active","daysPastDue":38},{"id":161,"customer":"Samidi Nangi","invoice":"CRD0162","invoiceDate":"2026-03-21","dueDate":"2026-05-21","interest":6000.0,"daysRemaining":-38,"paidDays":12,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":7200.0,"balance":28800.0,"status":"Active","daysPastDue":38},{"id":162,"customer":"Sudu Mama","invoice":"CRD0163","invoiceDate":"2026-03-22","dueDate":"2026-05-22","interest":2000.0,"daysRemaining":-37,"paidDays":0,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":0.0,"balance":12000.0,"status":"Active","daysPastDue":37},{"id":163,"customer":"Aayachana Chaminda","invoice":"CRD0164","invoiceDate":"2026-03-25","dueDate":"2026-05-25","interest":6000.0,"daysRemaining":-34,"paidDays":60,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":36000.0,"balance":0.0,"status":"Closed","daysPastDue":34},{"id":164,"customer":"Malabe Bus Golaya","invoice":"CRD0165","invoiceDate":"2026-03-25","dueDate":"2026-05-25","interest":4000.0,"daysRemaining":-34,"paidDays":26,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":10400.0,"balance":13600.0,"status":"Active","daysPastDue":34},{"id":165,"customer":"Malabe Mohan","invoice":"CRD0166","invoiceDate":"2026-03-25","dueDate":"2026-05-25","interest":4000.0,"daysRemaining":-34,"paidDays":60,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":24000.0,"balance":0.0,"status":"Closed","daysPastDue":34},{"id":166,"customer":"Gayani Manju","invoice":"CRD0167","invoiceDate":"2026-03-25","dueDate":"2026-05-25","interest":5000.0,"daysRemaining":-34,"paidDays":11,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":5500.0,"balance":24500.0,"status":"Active","daysPastDue":34},{"id":167,"customer":"Gali Suranga","invoice":"CRD0168","invoiceDate":"2026-03-30","dueDate":"2026-05-30","interest":20000.0,"daysRemaining":-29,"paidDays":10,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":20000.0,"balance":100000.0,"status":"Active","daysPastDue":29},{"id":168,"customer":"Tharika","invoice":"CRD0169","invoiceDate":"2026-04-26","dueDate":"2026-06-26","interest":20000.0,"daysRemaining":-2,"paidDays":6,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":12000.0,"balance":108000.0,"status":"Active","daysPastDue":2},{"id":169,"customer":"Faluda","invoice":"CRD0170","invoiceDate":"2026-04-26","dueDate":"2026-06-26","interest":6000.0,"daysRemaining":-2,"paidDays":13,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":7800.0,"balance":28200.0,"status":"Active","daysPastDue":2},{"id":170,"customer":"Niluka","invoice":"CRD0171","invoiceDate":"2026-04-26","dueDate":"2026-06-26","interest":3000.0,"daysRemaining":-2,"paidDays":19,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":5700.0,"balance":12300.0,"status":"Active","daysPastDue":2},{"id":171,"customer":"Kumari Chita","invoice":"CRD0172","invoiceDate":"2026-04-26","dueDate":"2026-06-26","interest":2000.0,"daysRemaining":-2,"paidDays":32,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":6400.0,"balance":5600.0,"status":"Active","daysPastDue":2},{"id":172,"customer":"Nilushi","invoice":"CRD0173","invoiceDate":"2026-04-25","dueDate":"2026-06-25","interest":4000.0,"daysRemaining":-3,"paidDays":50,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":20000.0,"balance":4000.0,"status":"Active","daysPastDue":3},{"id":173,"customer":"Dulaj (Nimesh)","invoice":"CRD0174","invoiceDate":"2026-04-24","dueDate":"2026-06-24","interest":10000.0,"daysRemaining":-4,"paidDays":0,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":0.0,"balance":60000.0,"status":"Active","daysPastDue":4},{"id":174,"customer":"Pathum Malli Malabe","invoice":"CRD0175","invoiceDate":"2026-04-27","dueDate":"2026-06-27","interest":2000.0,"daysRemaining":-1,"paidDays":60,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":12000.0,"balance":0.0,"status":"Closed","daysPastDue":1},{"id":175,"customer":"Rasika Akka","invoice":"CRD0176","invoiceDate":"2026-04-26","dueDate":"2026-06-26","interest":3000.0,"daysRemaining":-2,"paidDays":22,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":6600.0,"balance":11400.0,"status":"Active","daysPastDue":2},{"id":176,"customer":"Pinthaliya pol Kade","invoice":"CRD0177","invoiceDate":"2026-05-03","dueDate":"2026-07-03","interest":10000.0,"daysRemaining":5,"paidDays":60,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":60000.0,"balance":0.0,"status":"Closed","daysPastDue":-5},{"id":177,"customer":"Welivita Mas Kade","invoice":"CRD0178","invoiceDate":"2026-05-06","dueDate":"2026-07-06","interest":30000.0,"daysRemaining":8,"paidDays":19,"principal":150000.0,"totalWithInterest":180000.0,"totalPaid":57000.0,"balance":123000.0,"status":"Active","daysPastDue":-8},{"id":178,"customer":"Sudhakaran","invoice":"CRD0179","invoiceDate":"2026-05-07","dueDate":"2026-07-07","interest":1000.0,"daysRemaining":9,"paidDays":10,"principal":5000.0,"totalWithInterest":6000.0,"totalPaid":1000.0,"balance":5000.0,"status":"Active","daysPastDue":-9},{"id":179,"customer":"Piyal","invoice":"CRD0180","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":20000.0,"daysRemaining":16,"paidDays":0,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":0.0,"balance":120000.0,"status":"Active","daysPastDue":-16},{"id":180,"customer":"Mohan","invoice":"CRD0181","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":10000.0,"daysRemaining":16,"paidDays":21,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":21000.0,"balance":39000.0,"status":"Active","daysPastDue":-16},{"id":181,"customer":"Saliya","invoice":"CRD0182","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":20000.0,"daysRemaining":16,"paidDays":3,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":6000.0,"balance":114000.0,"status":"Active","daysPastDue":-16},{"id":182,"customer":"Falcon Bus Sanju","invoice":"CRD0183","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":10000.0,"daysRemaining":16,"paidDays":4,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":4000.0,"balance":56000.0,"status":"Active","daysPastDue":-16},{"id":183,"customer":"Nirmala","invoice":"CRD0184","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":2000.0,"daysRemaining":16,"paidDays":7,"principal":10000.0,"totalWithInterest":12000.0,"totalPaid":1400.0,"balance":10600.0,"status":"Active","daysPastDue":-16},{"id":184,"customer":"Aayachana Chaminda","invoice":"CRD0185","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":6000.0,"daysRemaining":16,"paidDays":6,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":3600.0,"balance":32400.0,"status":"Active","daysPastDue":-16},{"id":185,"customer":"Manju","invoice":"CRD0186","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":7000.0,"daysRemaining":16,"paidDays":6,"principal":35000.0,"totalWithInterest":42000.0,"totalPaid":4200.0,"balance":37800.0,"status":"Active","daysPastDue":-16},{"id":186,"customer":"Malabe Nalaka","invoice":"CRD0187","invoiceDate":"2026-05-14","dueDate":"2026-07-14","interest":6000.0,"daysRemaining":16,"paidDays":0,"principal":30000.0,"totalWithInterest":36000.0,"totalPaid":0.0,"balance":36000.0,"status":"Active","daysPastDue":-16},{"id":187,"customer":"Janaka Shed","invoice":"CRD0188","invoiceDate":"2026-05-15","dueDate":"2026-07-15","interest":5000.0,"daysRemaining":17,"paidDays":13,"principal":25000.0,"totalWithInterest":30000.0,"totalPaid":6500.0,"balance":23500.0,"status":"Active","daysPastDue":-17},{"id":188,"customer":"Pinthaliya pol Kade","invoice":"CRD0189","invoiceDate":"2026-05-22","dueDate":"2026-07-22","interest":20000.0,"daysRemaining":24,"paidDays":6,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":12000.0,"balance":108000.0,"status":"Active","daysPastDue":-24},{"id":189,"customer":"Kalpa Malabe","invoice":"CRD0190","invoiceDate":"2026-05-23","dueDate":"2026-07-23","interest":10000.0,"daysRemaining":25,"paidDays":0,"principal":50000.0,"totalWithInterest":60000.0,"totalPaid":0.0,"balance":60000.0,"status":"Active","daysPastDue":-25},{"id":190,"customer":"Bindu Mas Kade","invoice":"CRD0191","invoiceDate":"2026-05-26","dueDate":"2026-07-26","interest":20000.0,"daysRemaining":28,"paidDays":0,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":0.0,"balance":120000.0,"status":"Active","daysPastDue":-28},{"id":191,"customer":"Lalitha Aunty","invoice":"CRD0192","invoiceDate":"2026-05-26","dueDate":"2026-07-26","interest":4000.0,"daysRemaining":28,"paidDays":0,"principal":20000.0,"totalWithInterest":24000.0,"totalPaid":0.0,"balance":24000.0,"status":"Active","daysPastDue":-28},{"id":192,"customer":"Malith Post Office","invoice":"CRD0193","invoiceDate":"2026-06-03","dueDate":"2026-08-03","interest":20000.0,"daysRemaining":36,"paidDays":0,"principal":100000.0,"totalWithInterest":120000.0,"totalPaid":0.0,"balance":120000.0,"status":"Active","daysPastDue":-36},{"id":193,"customer":"Pathum Malli Malabe","invoice":"CRD0194","invoiceDate":"2026-06-03","dueDate":"2026-08-03","interest":3000.0,"daysRemaining":36,"paidDays":0,"principal":15000.0,"totalWithInterest":18000.0,"totalPaid":0.0,"balance":18000.0,"status":"Active","daysPastDue":-36}];
 
-let me=null, loans=null, allCols=[], amtStr='0', selLoan=null;
+let me=null, loans=[], allCols=[], amtStr='0', selLoan=null;
 
 const fmt=n=>'LKR '+Math.round(n).toLocaleString();
 const tod=()=>new Date().toISOString().split('T')[0];
-function saveLocal(){localStorage.setItem('lkf_loans',JSON.stringify(loans));localStorage.setItem('lkf_all_cols',JSON.stringify(allCols))}
-function getUrl(){return localStorage.getItem('lkf_url')||''}
+function saveL(){localStorage.setItem('bmc_loans',JSON.stringify(loans));localStorage.setItem('bmc_all_cols',JSON.stringify(allCols))}
+function getUrl(){return localStorage.getItem('bmc_url')||''}
 function myCols(){return allCols.filter(c=>c.collector===me)}
 function todCols(){return myCols().filter(c=>String(c.date).startsWith(tod()))}
+function getPhoto(){return localStorage.getItem('bmc_photo_'+me)||''}
+
+// Recalc days past due from actual due date
+function recalc(ls){
+  const today=new Date(); today.setHours(0,0,0,0);
+  ls.forEach(l=>{
+    if(l.dueDate&&l.status==='Active'){
+      const due=new Date(l.dueDate); due.setHours(0,0,0,0);
+      l.daysPastDue=Math.floor((today-due)/86400000);
+    }else l.daysPastDue=l.daysPastDue||0;
+  });
+  return ls;
+}
 
 // ── AUTH ─────────────────────────────────────────
 function login(){
@@ -288,14 +272,17 @@ function login(){
   if(!name){err.textContent='Please select your name.';err.style.display='block';return}
   if(pass!==PW[name]){err.style.display='block';return}
   me=name;
-  loans=JSON.parse(localStorage.getItem('lkf_loans')||'null')||JSON.parse(JSON.stringify(SEED));
-  allCols=JSON.parse(localStorage.getItem('lkf_all_cols')||'[]');
-  document.getElementById('tbAv').textContent=name[0];
+  loans=recalc(JSON.parse(localStorage.getItem('bmc_loans')||'null')||JSON.parse(JSON.stringify(SEED)));
+  allCols=JSON.parse(localStorage.getItem('bmc_all_cols')||'[]');
   document.getElementById('tbName').textContent=name;
+  document.getElementById('tbRole').textContent=ROLES[name]||'Collector';
+  renderPhoto('tbPhoto');
   document.getElementById('sLogin').classList.remove('active');
   document.getElementById('sApp').classList.add('active');
   buildNumpad();
-  syncData().then(()=>{renderAll()});
+  syncData().then(()=>renderAll());
+  // Auto-refresh every 60s
+  setInterval(()=>syncData().then(()=>renderAll()),60000);
 }
 
 function signOut(){
@@ -306,96 +293,103 @@ function signOut(){
   document.getElementById('nameSelect').value='';
 }
 
+function renderPhoto(elId){
+  const el=document.getElementById(elId);
+  const photo=getPhoto();
+  if(photo){
+    el.innerHTML=`<img src="${photo}" alt="${me}">`;
+  }else{
+    el.textContent=me?me[0]:'?';
+    el.style.background='linear-gradient(135deg,#1d4ed8,#7c3aed)';
+    el.style.color='#fff';
+    el.style.display='flex';el.style.alignItems='center';el.style.justifyContent='center';
+  }
+}
+
 // ── SYNC ─────────────────────────────────────────
 function setSP(st,msg){
-  const el=document.getElementById('syncPill');
-  el.className='sync-pill '+(st==='ok'?'sp-ok':st==='err'?'sp-err':'sp-ing');
+  const el=document.getElementById('syncP');
+  el.className='sync-p '+(st==='ok'?'sp-ok':st==='err'?'sp-err':'sp-ing');
   el.textContent=msg;
 }
-async function apiFetch(action){
-  const url=getUrl(); if(!url)return null;
-  try{const r=await fetch(url+'?action='+action);return await r.json()}catch{return null}
-}
-async function apiPost(action,data){
-  const url=getUrl(); if(!url)return null;
-  try{const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action,data})});return await r.json()}catch{return null}
-}
+async function apiFetch(a){const u=getUrl();if(!u)return null;try{const r=await fetch(u+'?action='+a);return await r.json()}catch{return null}}
+async function apiPost(a,d){const u=getUrl();if(!u)return null;try{const r=await fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:a,data:d})});return await r.json()}catch{return null}}
 async function syncData(){
-  if(!getUrl()){setSP('err','⚠ No URL');return}
-  setSP('ing','⟳ Syncing');
+  if(!getUrl()){setSP('err','⚠ Offline');return}
+  setSP('ing','⟳ Sync');
   const[lr,cr]=await Promise.all([apiFetch('getLoans'),apiFetch('getCollections')]);
-  if(lr?.loans?.length){loans=lr.loans;localStorage.setItem('lkf_loans',JSON.stringify(loans))}
-  if(cr?.collections){allCols=cr.collections;localStorage.setItem('lkf_all_cols',JSON.stringify(allCols))}
-  setSP(getUrl()?'ok':'err', getUrl()?'✓ Live':'⚠ Offline');
+  if(lr?.loans?.length){loans=recalc(lr.loans);localStorage.setItem('bmc_loans',JSON.stringify(loans))}
+  if(cr?.collections){allCols=cr.collections;localStorage.setItem('bmc_all_cols',JSON.stringify(allCols))}
+  setSP('ok','✓ Live');
 }
 
 // ── RENDER ALL ────────────────────────────────────
 function renderAll(){
-  renderBanner();
-  buildClientSelect();
-  renderLog();
-  renderPending();
-  renderProfile();
+  renderBanner(); buildCliSelect(); renderLog(); renderPending(); renderProfile();
+  checkWarnings();
 }
 
-// ── BANNER ────────────────────────────────────────
+function checkWarnings(){
+  const active=loans.filter(l=>l.status==='Active');
+  const bl30=active.filter(l=>(l.daysPastDue||0)>=30);
+  const w20=active.filter(l=>(l.daysPastDue||0)>=20&&(l.daysPastDue||0)<30);
+  const w10=active.filter(l=>(l.daysPastDue||0)>=10&&(l.daysPastDue||0)<20);
+  const wa=document.getElementById('warnAlert');
+  if(bl30.length||w20.length||w10.length){
+    wa.style.display='block';
+    wa.textContent=`⛔ ${bl30.length} Blacklisted · 🔴 ${w20.length} Final Warning · ⚠️ ${w10.length} Warning — Check Pending tab`;
+  }else wa.style.display='none';
+}
+
 function renderBanner(){
   const tc=todCols(), tot=tc.reduce((s,c)=>s+Number(c.amount),0);
   const d=new Date();
   document.getElementById('todayBanner').innerHTML=`
     <div class="tb-date">${d.toLocaleDateString('en-LK',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</div>
     <div class="tb-stats">
-      <div class="tb-stat"><div class="v">LKR ${Math.round(tot).toLocaleString()}</div><div class="l">Collected Today</div></div>
-      <div class="tb-stat"><div class="v">${tc.length}</div><div class="l">Clients Paid</div></div>
+      <div class="tb-s"><div class="v">LKR ${Math.round(tot).toLocaleString()}</div><div class="l">Collected Today</div></div>
+      <div class="tb-s"><div class="v">${tc.length}</div><div class="l">Clients Paid</div></div>
     </div>`;
 }
 
-// ── CLIENT SELECT ─────────────────────────────────
-function buildClientSelect(){
+function buildCliSelect(){
   const active=loans.filter(l=>l.status==='Active').sort((a,b)=>String(a.customer).localeCompare(String(b.customer)));
-  const sel=document.getElementById('clientSel');
+  const sel=document.getElementById('cliSel');
   sel.innerHTML='<option value="">Choose a client...</option>'+
     active.map(l=>`<option value="${l.id}">${l.customer}  ·  Bal: ${fmt(l.balance)}</option>`).join('');
 }
 
-function pickClient(){
-  const id=parseInt(document.getElementById('clientSel').value);
-  const det=document.getElementById('clientDetail');
-  const ac=document.getElementById('amtCard');
+function pickCli(){
+  const id=parseInt(document.getElementById('cliSel').value);
+  const det=document.getElementById('cdet'), ac=document.getElementById('amtCard');
   if(!id){det.style.display='none';ac.style.display='none';selLoan=null;return}
-  selLoan=loans.find(l=>l.id==id);
-  if(!selLoan)return;
+  selLoan=loans.find(l=>l.id==id); if(!selLoan)return;
+  const dpd=selLoan.daysPastDue||0;
   document.getElementById('cd-bal').textContent=fmt(selLoan.balance);
   document.getElementById('cd-daily').textContent=fmt(Number(selLoan.totalWithInterest)/60)+'/day';
   document.getElementById('cd-inv').textContent=selLoan.invoice;
   document.getElementById('cd-due').textContent=selLoan.dueDate||'—';
-  det.style.display='block';ac.style.display='block';
-  amtStr=String(Math.round(Number(selLoan.totalWithInterest)/60));
-  updAmt();
+  document.getElementById('cd-dpd').textContent=dpd>0?'+'+dpd+' days overdue':'On time';
+  document.getElementById('cd-dpd').className='cdr-v '+(dpd>=30?'red':dpd>0?'amber':'blue');
+  det.style.display='block'; ac.style.display='block';
+  amtStr=String(Math.round(Number(selLoan.totalWithInterest)/60)); updAmt();
   document.getElementById('colAlert').innerHTML='';
 }
 
-// ── NUMPAD ────────────────────────────────────────
 function buildNumpad(){
   const np=document.getElementById('numpad');
   np.innerHTML=['1','2','3','4','5','6','7','8','9','⌫','0','✓'].map(k=>
     `<button class="np${(k==='⌫'||k==='✓')?' act':''}" onclick="npTap('${k}')">${k}</button>`).join('');
 }
-function npTap(k){
-  if(k==='✓'){collect();return}
-  if(k==='⌫'){amtStr=amtStr.length>1?amtStr.slice(0,-1):'0'}
-  else{amtStr=amtStr==='0'?k:amtStr+k}
-  updAmt();
-}
+function npTap(k){if(k==='✓'){collect();return}if(k==='⌫'){amtStr=amtStr.length>1?amtStr.slice(0,-1):'0'}else{amtStr=amtStr==='0'?k:amtStr+k}updAmt()}
 function updAmt(){document.getElementById('amtDisp').textContent=Number(amtStr).toLocaleString()}
 
-// ── COLLECT ───────────────────────────────────────
+// ── COLLECT ─────────────────────────────────────
 async function collect(){
-  const amt=parseFloat(amtStr);
-  const btn=document.getElementById('colBtn');
-  if(!selLoan){showToast('Select a client first','r');return}
-  if(!amt||amt<=0){showToast('Enter an amount','r');return}
-  btn.disabled=true;btn.innerHTML='<span class="spinner"></span>Saving to Google Sheets...';
+  const amt=parseFloat(amtStr), btn=document.getElementById('colBtn');
+  if(!selLoan){showToast('Select a client','r');return}
+  if(!amt||amt<=0){showToast('Enter amount','r');return}
+  btn.disabled=true; btn.innerHTML='<span class="spinner"></span>Saving...';
   const now=new Date(), time=now.toLocaleTimeString('en-LK',{hour:'2-digit',minute:'2-digit'});
   const note=document.getElementById('noteIn').value.trim();
   selLoan.totalPaid=Number(selLoan.totalPaid)+amt;
@@ -404,61 +398,55 @@ async function collect(){
   if(selLoan.balance<=0){selLoan.status='Closed';selLoan.balance=0}
   const col={id:Date.now(),date:tod(),time,collector:me,loanId:selLoan.id,
     customer:selLoan.customer,invoice:selLoan.invoice,amount:amt,note,balance:selLoan.balance};
-  allCols.push(col);saveLocal();
+  allCols.push(col); saveL();
   setSP('ing','⟳ Saving');
   const[r1,r2]=await Promise.all([apiPost('addCollection',col),apiPost('updateLoan',selLoan)]);
   const ok=r1&&r1.ok;
   setSP(ok?'ok':'err',ok?'✓ Saved':'⚠ Offline');
-  showToast(ok?'✓ Saved to Google Sheets!':'✓ Saved locally (offline)','g');
-  document.getElementById('clientSel').value='';
-  document.getElementById('clientDetail').style.display='none';
+  showToast(ok?`✓ Saved! ${fmt(amt)} from ${selLoan.customer}`:`✓ Saved locally`,'g');
+  document.getElementById('cliSel').value='';
+  document.getElementById('cdet').style.display='none';
   document.getElementById('amtCard').style.display='none';
   document.getElementById('noteIn').value='';
   document.getElementById('colAlert').innerHTML='';
-  amtStr='0';selLoan=null;
-  btn.disabled=false;btn.innerHTML='✓ Record Collection';
+  amtStr='0'; selLoan=null;
+  btn.disabled=false; btn.innerHTML='✓ Record Collection';
   renderAll();
 }
 
-// ── LOG ───────────────────────────────────────────
+// ── LOG ──────────────────────────────────────────
 function renderLog(){
   const tc=todCols().slice().reverse();
   const tot=tc.reduce((s,c)=>s+Number(c.amount),0);
   let h='';
   if(tc.length){
-    h+=`<div class="log-total">
-      <div><div class="lt-l">Total Today</div><div class="lt-v">${fmt(tot)}</div></div>
-      <div style="text-align:right"><div class="lt-l">Clients</div><div class="lt-v" style="color:var(--ink)">${tc.length}</div></div>
-    </div>`;
-    h+=tc.map(c=>`<div class="log-item">
-      <div class="li-ic">💰</div>
-      <div class="li-info">
-        <div class="li-name">${c.customer}</div>
-        <div class="li-meta">${c.invoice} · ${c.time}${c.note?' · '+c.note:''}</div>
-      </div>
-      <div class="li-amt">+${fmt(c.amount)}</div>
-    </div>`).join('');
+    h+=`<div class="log-tot"><div><div class="lt-l">Total Today</div><div class="lt-v">${fmt(tot)}</div></div><div style="text-align:right"><div class="lt-l">Clients</div><div class="lt-v" style="color:var(--ink)">${tc.length}</div></div></div>`;
+    h+=tc.map(c=>`<div class="li"><div class="li-ic">💰</div><div class="li-info"><div class="li-name">${c.customer}</div><div class="li-meta">${c.invoice} · ${c.time}${c.note?' · '+c.note:''}</div></div><div class="li-amt">+${fmt(c.amount)}</div></div>`).join('');
   }else{
-    h=`<div class="empty"><div class="empty-ic">📋</div><div class="empty-t">No collections yet</div><div class="empty-s">Go to Collect to get started</div></div>`;
+    h='<div class="empty"><div class="empty-ic">📋</div><div style="font-weight:600;color:var(--muted)">No collections yet today</div></div>';
   }
   document.getElementById('logContent').innerHTML=h;
 }
 
-// ── PENDING ───────────────────────────────────────
+// ── PENDING ──────────────────────────────────────
 function renderPending(){
-  const active=loans.filter(l=>l.status==='Active').sort((a,b)=>Number(a.daysRemaining)-Number(b.daysRemaining));
-  const paidToday=new Set(todCols().map(c=>String(c.loanId)));
-  let h=`<div style="font-size:13px;color:var(--muted);font-weight:600;margin-bottom:12px;padding:2px 0">${active.length} active loans — tap any to collect quickly</div>`;
+  const active=loans.filter(l=>l.status==='Active').sort((a,b)=>(b.daysPastDue||0)-(a.daysPastDue||0));
+  const paid=new Set(todCols().map(c=>String(c.loanId)));
+  let h=`<div style="font-size:12px;color:var(--muted);font-weight:600;margin-bottom:10px">${active.length} active loans — worst overdue first · tap to collect</div>`;
   h+=active.map(l=>{
-    const done=paidToday.has(String(l.id));
-    const d=Number(l.daysRemaining);
-    const tagCls=d<=0?'tag-ov':d<=7?'tag-warn':'tag-ok';
-    const tagTxt=d<=0?'OVERDUE':d+' days left';
-    return`<div class="pend-item" onclick="quickGo(${l.id})" style="${done?'opacity:.55':''}">
+    const done=paid.has(String(l.id));
+    const dpd=l.daysPastDue||0;
+    // Warning level tag
+    const tagCls=dpd>=30?'tag-bl':dpd>=20?'tag-ov':dpd>=10?'tag-warn':dpd>0?'tag-ov':'tag-ok';
+    const tagTxt=dpd>=30?'⛔ BLACKLIST':dpd>=20?'🔴 FINAL WARN':dpd>=10?'⚠️ WARN':dpd>0?'+'+dpd+'d overdue':'On time';
+    // Days info
+    const dueInfo=dpd>0?`+${dpd} days past due`:(dpd===0?'Due today':'Due '+l.dueDate);
+    return`<div class="pend-it" onclick="${done?'':('quickGo('+l.id+')')}" style="${done?'opacity:.55':''}">
       <div class="pi-l">
         <div class="pi-name">${done?'✓ ':''}<span style="${done?'text-decoration:line-through;color:var(--muted)':''}">${l.customer}</span></div>
         <div class="pi-inv">${l.invoice} · Paid ${l.paidDays}/60 days</div>
-        ${done?'<div class="done-stamp">✓ Collected today</div>':''}
+        <div class="pi-due" style="color:${dpd>0?'var(--red)':'var(--muted)'}">${dueInfo}</div>
+        ${done?'<div class="done-st">✓ Collected today</div>':''}
       </div>
       <div class="pi-r">
         <div class="pi-bal">${fmt(l.balance)}</div>
@@ -471,65 +459,63 @@ function renderPending(){
 function quickGo(id){
   showPage(0);
   setTimeout(()=>{
-    const sel=document.getElementById('clientSel');
-    sel.value=id; pickClient();
+    const sel=document.getElementById('cliSel'); sel.value=id; pickCli();
     document.getElementById('content').scrollTo({top:0,behavior:'smooth'});
   },80);
 }
 
-// ── PROFILE ───────────────────────────────────────
+// ── PROFILE ──────────────────────────────────────
 function renderProfile(){
   const mc=myCols(), tc=todCols();
   const totAll=mc.reduce((s,c)=>s+Number(c.amount),0);
   const totTod=tc.reduce((s,c)=>s+Number(c.amount),0);
-  const url=getUrl();
+  const photo=getPhoto();
   document.getElementById('profContent').innerHTML=`
     <div class="prof-banner">
-      <div class="prof-av">${me[0]}</div>
+      <div class="prof-photo" id="profPhoto">${photo?`<img src="${photo}" alt="${me}">`:(me?me[0]:'?')}</div>
       <div class="prof-name">${me}</div>
-      <div class="prof-role">Collector · LK Finance Pro</div>
+      <div class="prof-role">${ROLES[me]||'Collector'} · Bhavi Micro Credit</div>
       <div class="prof-stats">
         <div class="ps-box"><div class="ps-v">${fmt(totTod)}</div><div class="ps-l">Today</div></div>
         <div class="ps-box"><div class="ps-v">${fmt(totAll)}</div><div class="ps-l">All Time</div></div>
       </div>
     </div>
+    <div class="photo-upload">
+      <label>📸 Update Profile Photo</label>
+      <input type="file" accept="image/*" onchange="uploadPhoto(this)">
+    </div>
     <div class="info-card">
-      <div class="info-row"><span class="ir-l">Name</span><span class="ir-v">${me}</span></div>
-      <div class="info-row"><span class="ir-l">Today's Clients</span><span class="ir-v">${tc.length}</span></div>
-      <div class="info-row"><span class="ir-l">Google Sheets</span><span class="ir-v" style="color:${url?'var(--green)':'var(--red)'}">${url?'✓ Connected':'⚠ Not set'}</span></div>
+      <div class="ir"><span class="ir-l">Name</span><span class="ir-v">${me}</span></div>
+      <div class="ir"><span class="ir-l">Role</span><span class="ir-v">${ROLES[me]||'Collector'}</span></div>
+      <div class="ir"><span class="ir-l">Today's Clients</span><span class="ir-v">${tc.length}</span></div>
+      <div class="ir"><span class="ir-l">Google Sheets</span><span class="ir-v" style="color:${getUrl()?'var(--green)':'var(--red)'}">${getUrl()?'✓ Connected':'⚠ Not set'}</span></div>
     </div>
-    <div class="url-card">
-      <label>Google Sheets URL (paste once)</label>
-      <input class="url-inp" type="url" id="urlFld" placeholder="https://script.google.com/macros/s/.../exec" value="${url}">
-      <button class="btn-save-url" onclick="saveUrl()">Save & Connect</button>
-    </div>
-    <button class="btn-signout" onclick="signOut()">Sign Out</button>`;
+    <button class="btn-so" onclick="signOut()">Sign Out</button>`;
 }
 
-function saveUrl(){
-  const url=document.getElementById('urlFld').value.trim();
-  localStorage.setItem('lkf_url',url);
-  showToast('✓ URL saved!','g');
-  syncData().then(()=>renderAll());
+function uploadPhoto(input){
+  const file=input.files[0]; if(!file)return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    localStorage.setItem('bmc_photo_'+me, e.target.result);
+    renderPhoto('tbPhoto');
+    renderProfile();
+    showToast('✓ Photo updated','g');
+  };
+  reader.readAsDataURL(file);
 }
 
-// ── PAGES ─────────────────────────────────────────
+// ── PAGES ────────────────────────────────────────
 const PAGES=['pgCollect','pgLog','pgPending','pgProfile'];
 function showPage(i){
-  PAGES.forEach((p,j)=>{
-    document.getElementById(p).classList.toggle('on',i===j);
-    document.getElementById('bn'+j).classList.toggle('on',i===j);
-  });
+  PAGES.forEach((p,j)=>{document.getElementById(p).classList.toggle('on',i===j);document.getElementById('bn'+j).classList.toggle('on',i===j)});
   document.getElementById('content').scrollTo({top:0});
-  if(i===1)renderLog();
-  if(i===2)renderPending();
-  if(i===3)renderProfile();
+  if(i===1)renderLog(); if(i===2)renderPending(); if(i===3)renderProfile();
 }
 
-// ── TOAST ─────────────────────────────────────────
 function showToast(msg,type){
-  const t=document.getElementById('toast');
-  t.textContent=msg;t.className='toast '+(type||'');t.classList.add('show');
+  const t=document.getElementById('toast'); t.textContent=msg;
+  t.className='toast '+(type||''); t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),3000);
 }
 </script>
