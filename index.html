@@ -246,7 +246,14 @@ let me=null, loans=[], allCols=[], amtStr='0', selLoan=null;
 const fmt=n=>'LKR '+Math.round(n).toLocaleString();
 const tod=()=>new Date().toISOString().split('T')[0];
 function saveL(){localStorage.setItem('bmc_loans',JSON.stringify(loans));localStorage.setItem('bmc_all_cols',JSON.stringify(allCols))}
-function getUrl(){return localStorage.getItem('bmc_url')||''}
+function getUrl(){
+  // Check both storage keys — bmc_url (new) and lkf_url (old) for compatibility
+  return localStorage.getItem('bmc_url') || localStorage.getItem('lkf_url') || '';
+}
+function saveUrl(url){
+  localStorage.setItem('bmc_url', url);
+  localStorage.setItem('lkf_url', url); // keep both in sync
+}
 function myCols(){return allCols.filter(c=>c.collector===me)}
 function todCols(){return myCols().filter(c=>String(c.date).startsWith(tod()))}
 function getPhoto(){return localStorage.getItem('bmc_photo_'+me)||''}
@@ -272,6 +279,13 @@ function login(){
   if(!name){err.textContent='Please select your name.';err.style.display='block';return}
   if(pass!==PW[name]){err.style.display='block';return}
   me=name;
+  // Migrate old keys if present
+  if(!localStorage.getItem('bmc_loans') && localStorage.getItem('lkf_loans')) {
+    localStorage.setItem('bmc_loans', localStorage.getItem('lkf_loans'));
+  }
+  if(!localStorage.getItem('bmc_all_cols') && localStorage.getItem('lkf_cols')) {
+    localStorage.setItem('bmc_all_cols', localStorage.getItem('lkf_cols'));
+  }
   loans=recalc(JSON.parse(localStorage.getItem('bmc_loans')||'null')||JSON.parse(JSON.stringify(SEED)));
   allCols=JSON.parse(localStorage.getItem('bmc_all_cols')||'[]');
   document.getElementById('tbName').textContent=name;
@@ -488,9 +502,14 @@ function renderProfile(){
       <div class="ir"><span class="ir-l">Name</span><span class="ir-v">${me}</span></div>
       <div class="ir"><span class="ir-l">Role</span><span class="ir-v">${ROLES[me]||'Collector'}</span></div>
       <div class="ir"><span class="ir-l">Today's Clients</span><span class="ir-v">${tc.length}</span></div>
-      <div class="ir"><span class="ir-l">Google Sheets</span><span class="ir-v" style="color:${getUrl()?'var(--green)':'var(--red)'}">${getUrl()?'✓ Connected':'⚠ Not set'}</span></div>
+      <div class="ir"><span class="ir-l">Google Sheets</span><span class="ir-v" style="color:${getUrl()?'var(--green)':'var(--red)'}">${getUrl()?'✓ Connected ✓':'⚠ URL not saved yet'}</span></div>
     </div>
-    <button class="btn-so" onclick="signOut()">Sign Out</button>`;
+    ${!getUrl() ? `<div style="background:var(--amberl);border:1px solid #fcd34d;border-radius:13px;padding:14px;margin-bottom:10px">
+      <div style="font-size:12px;font-weight:700;color:#92400e;margin-bottom:8px">⚙️ Paste your Google Sheets URL here (ask your owner)</div>
+      <input id="urlInput" type="url" style="width:100%;padding:11px 13px;border:2px solid #fcd34d;border-radius:10px;font-size:13px;font-family:monospace;color:var(--ink);margin-bottom:8px;background:#fff" placeholder="https://script.google.com/macros/s/.../exec" value="${getUrl()}">
+      <button onclick="saveUrlFromProfile()" style="width:100%;padding:12px;background:var(--blue);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">Save URL & Connect</button>
+    </div>` : `<div style="background:var(--greenl);border-radius:13px;padding:12px;margin-bottom:10px;text-align:center;font-size:13px;font-weight:600;color:var(--green)">✓ Google Sheets connected — data saves automatically</div>`}
+    <button class="btn-so" onclick="signOut()">Sign Out</button>`; 
 }
 
 function uploadPhoto(input){
@@ -511,6 +530,16 @@ function showPage(i){
   PAGES.forEach((p,j)=>{document.getElementById(p).classList.toggle('on',i===j);document.getElementById('bn'+j).classList.toggle('on',i===j)});
   document.getElementById('content').scrollTo({top:0});
   if(i===1)renderLog(); if(i===2)renderPending(); if(i===3)renderProfile();
+}
+
+function saveUrlFromProfile(){
+  const input = document.getElementById('urlInput');
+  if(!input) return;
+  const url = input.value.trim();
+  if(!url){ showToast('Paste the URL first','r'); return; }
+  saveUrl(url);
+  showToast('✓ Connected to Google Sheets!','g');
+  syncData().then(()=>renderAll());
 }
 
 function showToast(msg,type){
